@@ -156,30 +156,27 @@
 	<div class="row">
 		<div class="col-sm-4 content1-left"></div>
 		<div class="col-sm-4 content1-center">
-			<a class="text-center font-weight-bold">Los mejores precios de turismo en Chile</a>
-			<div class="btn-group dropdown">
-  			<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   			 Seleccionar Region
-  			</a>
-  			<div class="dropdown-menu">
-    			<a class="dropdown-item" href="#">Arica</a>
-				<a class="dropdown-item" href="#">Tarapacá</a>
-				<a class="dropdown-item" href="#">Antofagasta</a>
-				<a class="dropdown-item" href="#">Atacama</a>
-				<a class="dropdown-item" href="#">Coquimbo</a>
-				<a class="dropdown-item" href="#">Valparaiso</a>
-				<a class="dropdown-item" href="#">Santiago</a>
-				<a class="dropdown-item" href="#">O'Higgins</a>
-				<a class="dropdown-item" href="#">El Maule</a>
-				<a class="dropdown-item" href="#">Ñuble</a>
-				<a class="dropdown-item" href="#">Biobio</a>
-				<a class="dropdown-item" href="#">La Araucanía</a>
-				<a class="dropdown-item" href="#">Los Ríos</a>
-				<a class="dropdown-item" href="#">Los Lagos</a>
-				<a class="dropdown-item" href="#">Aysen</a>
-				<a class="dropdown-item" href="#">Magallanes</a>
-  			</div>
-		</div>
+			<a class="text-center font-weight-bold">Seleccionar una Region:</a>			
+  			
+  			<select name="regiones" id="regiones">
+    			<option values="Arica">Arica</a>
+				<option values="Tarapaca">Tarapacá</a>
+				<option values="Antofagasta">Antofagasta</a>
+				<option values="Atacama">Atacama</a>
+				<option values="Coquimbo">Coquimbo</a>
+				<option values="Valparaiso">Valparaiso</a>
+				<option values="Santiago">Santiago</a>
+				<option values="OHiggins">O'Higgins</a>
+				<option values="ElMaule">El Maule</a>
+				<option values="Nuble">Ñuble</a>
+				<option values="Biobio">Biobio</a>
+				<option values="LaAraucania">La Araucanía</a>
+				<option values="LosRios">Los Ríos</a>
+				<option values="LosLagos">Los Lagos</a>
+				<option values="Aysen">Aysen</a>
+				<option values="Magallanes">Magallanes</a>
+  			</select>
+		
 		</div>
 		<div class="col-sm-4 content1-right"></div>
 	</div>
