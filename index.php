@@ -134,13 +134,13 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src = "img/miami2.jpg" data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+                <img src = "img/alpinismo.jpg" data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img src = "img/cancun2.jpg" data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+                <img src = "img/trekking.jpg" data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img src = "img/machupicchu2.jpg"data-src="holder.js/900x500/auto/#666:#444/text:Third slide" alt="Third slide">
+                <img src = "img/lancha.jpg"data-src="holder.js/900x500/auto/#666:#444/text:Third slide" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
