@@ -153,7 +153,39 @@
         </a>
     </div>
     <br>
-    <p class="text-center font-weight-bold">Los mejores precios de turismo en Chile</p>
+	<div class="row">
+		<div class="col-sm-4 content1-left"></div>
+		<div class="col-sm-4 content1-center">
+			<a class="text-center font-weight-bold">Los mejores precios de turismo en Chile</a>
+			<div class="btn-group dropdown">
+  			<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   			 Seleccionar Region
+  			</a>
+  			<div class="dropdown-menu">
+    			<a class="dropdown-item" href="#">Arica</a>
+				<a class="dropdown-item" href="#">Tarapacá</a>
+				<a class="dropdown-item" href="#">Antofagasta</a>
+				<a class="dropdown-item" href="#">Atacama</a>
+				<a class="dropdown-item" href="#">Coquimbo</a>
+				<a class="dropdown-item" href="#">Valparaiso</a>
+				<a class="dropdown-item" href="#">Santiago</a>
+				<a class="dropdown-item" href="#">O'Higgins</a>
+				<a class="dropdown-item" href="#">El Maule</a>
+				<a class="dropdown-item" href="#">Ñuble</a>
+				<a class="dropdown-item" href="#">Biobio</a>
+				<a class="dropdown-item" href="#">La Araucanía</a>
+				<a class="dropdown-item" href="#">Los Ríos</a>
+				<a class="dropdown-item" href="#">Los Lagos</a>
+				<a class="dropdown-item" href="#">Aysen</a>
+				<a class="dropdown-item" href="#">Magallanes</a>
+  			</div>
+		</div>
+		</div>
+		<div class="col-sm-4 content1-right"></div>
+	</div>
+	<br>
+	
+    
     <div class="mx-auto" style="width: 800px;">
     <img src=img/gato.jpg class="text-center" alt="gato">
     <img src=img/gato.jpg class="text-center" alt="gato">
