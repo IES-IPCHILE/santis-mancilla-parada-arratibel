@@ -154,58 +154,50 @@
     </div>
     <br>
     <p class="text-center font-weight-bold">Los mejores precios de turismo en Chile</p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
-    <div class="jumbotron">
-      <h1 class="display-3">Promociones</h1>
-      <br><br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/gato.jpg" alt="gato" class="img-thumbnail">
-    <br><br><br>
+    <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
     </div>
+    <br>
+    <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    </div>
+    <br>
+    <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    </div>
+    <br>
+    <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    </div>
+    <br>
+    <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    </div>
+    <br>
+    <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    </div>
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-3">Promociones</h1>
+        <div class="mx-auto" style="width: 800px;">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    <img src=img/gato.jpg class="text-center" alt="gato">
+    </div>
+    </div>
+    <p class="text-center font-weight-bold">Hola chiquillos como tan</p>
 </body>
 </html>
