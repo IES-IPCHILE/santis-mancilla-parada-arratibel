@@ -34,11 +34,51 @@
                         <a class="dropdown-item" href="#">Action 2</a>
                     </div>
                 </li>
-            </ul>
+                </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inicio">Iniciar Sesion</button>  
+            </form>            
+      </div>
+      <div class="modal fade" id="inicio">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+      
+            <!-- cabecera del diálogo -->
+            <div class="modal-header">
+              <h4 class="modal-title">Iniciar Sesion</h4>
+              <button type="button" class="close" data-dismiss="modal">X</button>
+            </div>
+      
+            <!-- cuerpo del diálogo -->
+            <div class="modal-body">
+                <div class="container-fluid">   
+                    <form>
+                        <div class="form-group row">
+                          <label for="usuario" class="col-lg-3 col-form-label">Nombre de usuario:</label>
+                          <div class="col-lg-9">
+                            <input type="text" class="form-control" id="usuario">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="clave" class="col-lg-3 col-form-label">Ingrese clave:</label>
+                          <div class="col-lg-9">
+                            <input type="password" class="form-control" id="clave">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="offset-lg-3 col-lg-9">
+                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                          </div> 
+                        </div>
+                      </form>                    
+                </div>            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+      
+          </div>
+        </div>
         </div>
     </nav>
     <div id="carouselId" class="carousel slide" data-ride="carousel">
@@ -67,7 +107,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
 
 </body>
 </html>
