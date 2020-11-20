@@ -176,51 +176,47 @@
 	</div>
 	<br>
 	
+  <!-- tabla -->
     
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="jumbotron">
-        <h1 class="display-3">Promociones</h1>
-        <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    </div>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre de servicio</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">ID Región</th>
+      <th scope="col">Fecha de creación</th>
+      <th scope="col">Edición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Soy</td>
+      <td>Un</td>
+      <td>Cuadrado</td>
+      <td><button type ="button" class="btn btn-secondary">Editar</button>
+      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Soy</td>
+      <td>Un</td>
+      <td>Rectángulo</td>
+      <td><button type ="button" class="btn btn-secondary">Editar</button>
+      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Soy</td>
+      <td>Una</td>
+      <td>Figura</td>
+      <td><button type ="button" class="btn btn-secondary">Editar</button>
+      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- footer -->
 	<footer>
   <div class="container">
     <div class="row">
