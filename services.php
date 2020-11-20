@@ -151,76 +151,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-        
     </div>
-    <br>    
-        <hr>
- <p class="text-center"></p>
- <br><br><br>
- <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    </div>
-    <div class="col-sm">
-      <h1>QUIÉNES SÓMOS</h1>
-    </div>
-    <div class="col-sm">
-    </div>
-    </div>
- </div>
- <br>
- <p class="text-center">Somos una empresa re-seller de los mejores servicios de turismo que encontrarás a nivel nacional, brindamos servicios de calidad con excelentes estándares certificados, ofrecemos nuestros
- servicios desde el 2010.</p>
- <br><hr>
- 
- <a href="services.php"><img src="img/adventure.jpg" class="img-fluid" alt="Ciclismo"></a>
- <br><br>
- <div class="jumbotron">
- <hr>
     <br>
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    </div>
-    <div class="col-sm">
-      <h1>NUESTRA MISIÓN.</h1>
-    </div>
-    <div class="col-sm">
-    </div>
-    </div>
- </div>
-<br>
- <p class="text-center">Nuestra misión y visión son conectar a las personas con la naturaleza, queremos ayudarle a hacer realidad el sueño de recorrer Chile de norte a sur a través de nuestros excelentes servicios.</p>
- <br>
- <img src="img/alpinismo2.jpg" class="rounded mx-auto d-block" alt="Alpinismo">
- <br>
- <hr>
- <br><br><br>
- </div>
- <footer>
-  <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-6">
-            <h6 class="text-muted lead">CONTACTO:</h6>
-            <h6 class="text-muted">
-            Casa Matriz N° 889<br>
-            Geronimo de alderete #890.<br>
-            Teléfonos: +56987526354 – 229765348.<br>
-            </h6>
-        </div>
-        <div class="col-xs-12 col-md-6">
-        <div class="pull-right">
-        <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
-              <div class="redes-footer">
-                  <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
-                  <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
-                  <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
-              </div>
-        </div>
-        <div class="row"> <p class="text-muted small text-right">La Florida, Concha y Toro #660.</p></div>
-    </div>
-  </div>  
-</div>
-</footer>
+    <h1 class ="display-1">QUE ANDAI CONTRATANDO WEÁS COCHINO CONCHETUMARE</h1>
 </body>
 </html>
