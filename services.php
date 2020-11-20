@@ -147,7 +147,131 @@
         </a>
     </div>
     <br>
-    <h1 class ="display-1">QUE ANDAI CONTRATANDO WEÁS COCHINO CONCHETUMARE</h1>
+    
+    <!-- primera fila de cartas -->
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 1</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <!-- carta -->
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 2</h5>
+    <p class="card-text">Servicio que ofrecemos</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 3</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    </div>
+ </div>
+ <br><br>
+<!-- fin primera fila de cartas -->
+
+ <!-- segunda fila de cartas -->
+ <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 4</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <!-- carta -->
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 5</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 6</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    </div>
+ </div>
+ <br><br>
+<!-- fin segunda fila de cartas -->
+ 
+
+  <!-- tercer fila de cartas -->
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 7</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <!-- carta -->
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 8</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 9</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    </div>
+ </div>
+ <br><br>
+<!-- fin tercer fila de cartas -->
+    
     <footer>
   <div class="container">
     <div class="row">
