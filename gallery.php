@@ -291,6 +291,31 @@
           </div>
         </div>
       </div>
+      <footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h6 class="text-muted lead">CONTACTO:</h6>
+            <h6 class="text-muted">
+            Casa Matriz N° 889<br>
+            Geronimo de alderete #890.<br>
+            Teléfonos: +56987526354 – 229765348.<br>
+            </h6>
+        </div>
+        <div class="col-xs-12 col-md-6">
+        <div class="pull-right">
+        <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+              <div class="redes-footer">
+                  <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
+                  <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
+                  <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
+              </div>
+        </div>
+        <div class="row"> <p class="text-muted small text-right">La Florida, Concha y Toro #660.</p></div>
+    </div>
+  </div>  
+</div>
+</footer>
 
 
 
