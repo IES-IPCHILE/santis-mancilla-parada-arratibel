@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <h1>CAMBIO DESDE LA RAMA MARCO A DEFAULT</h1>
+    <h1>CAMBIO DESDE LA RAMA MARCO A </h1>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
