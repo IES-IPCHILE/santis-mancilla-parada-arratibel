@@ -29,7 +29,7 @@
                     <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/contactus.php">Contacto</a>
                 </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">
