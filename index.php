@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <h1>CAMBIO DESDE LA RAMA MARCO A DEFAULT</h1>
+    <script></script>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -71,7 +71,7 @@
                             <button type="submit" class="btn btn-primary">Ingresar</button>
                           </div> 
                         </div>
-                      </form>                    
+                      </form>					
                 </div>            
             </div>
             <div class="modal-footer">
@@ -227,6 +227,30 @@
     <img src=img/gato.jpg class="text-center" alt="gato">
     </div>
     </div>
-    <p class="text-center font-weight-bold">Hola chiquillos como tan</p>
+	<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h6 class="text-muted lead">CONTACTO:</h6>
+            <h6 class="text-muted">
+            Casa Matriz N° 889<br>
+            Geronimo de alderete #890.<br>
+            Teléfonos: +56987526354 – 229765348.<br>
+            </h6>
+        </div>
+        <div class="col-xs-12 col-md-6">
+        <div class="pull-right">
+        <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+              <div class="redes-footer">
+                  <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
+                  <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
+                  <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
+              </div>
+        </div>
+        <div class="row"> <p class="text-muted small text-right">La Florida, Concha y Toro #660.</p></div>
+    </div>
+  </div>  
+</div>
+</footer>
 </body>
 </html>
