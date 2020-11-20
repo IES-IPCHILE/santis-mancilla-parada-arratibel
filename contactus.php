@@ -27,10 +27,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
-                </li>                
+                </li>    
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
-                </li>     
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/contactus.php">Contacto</a>
+                </li>                 
                 </ul>
             <form class="form-inline my-2 my-lg-0">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inicio">Iniciar Sesion</button>&nbsp;&nbsp;&nbsp;
@@ -150,76 +150,39 @@
         </a>
     </div>
     <br>
-	<div class="row">
-		<div class="col-sm-4 content1-left"></div>
-		<div class="col-sm-4 content1-center">
-			<a class="text-center font-weight-bold">Seleccionar una Region:</a>			
-  			
-  			<select name="regiones" id="regiones">
-    			<option values="Arica">Arica</a>
-				<option values="Tarapaca">Tarapacá</a>
-				<option values="Antofagasta">Antofagasta</a>
-				<option values="Atacama">Atacama</a>
-				<option values="Coquimbo">Coquimbo</a>
-				<option values="Valparaiso">Valparaiso</a>
-				<option values="Santiago">Santiago</a>
-				<option values="OHiggins">O'Higgins</a>
-				<option values="ElMaule">El Maule</a>
-				<option values="Nuble">Ñuble</a>
-				<option values="Biobio">Biobio</a>
-				<option values="LaAraucania">La Araucanía</a>
-				<option values="LosRios">Los Ríos</a>
-				<option values="LosLagos">Los Lagos</a>
-				<option values="Aysen">Aysen</a>
-				<option values="Magallanes">Magallanes</a>
-  			</select>
-		
-		</div>
-		<div class="col-sm-4 content1-right"></div>
-	</div>
-	<br>
-	
-  <!-- tabla -->
-    
-  <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Nombre de servicio</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">ID Región</th>
-      <th scope="col">Fecha de creación</th>
-      <th scope="col">Edición</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Soy</td>
-      <td>Un</td>
-      <td>Cuadrado</td>
-      <td><button type ="button" class="btn btn-secondary">Editar</button>
-      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Soy</td>
-      <td>Un</td>
-      <td>Rectángulo</td>
-      <td><button type ="button" class="btn btn-secondary">Editar</button>
-      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Soy</td>
-      <td>Una</td>
-      <td>Figura</td>
-      <td><button type ="button" class="btn btn-secondary">Editar</button>
-      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
-    </tr>
-  </tbody>
-</table>
 
-<!-- footer -->
+    <!-- contáctanos -->
+
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <h1>CONTÁCTANOS.</h1>
+    </div>
+    <div class="col-sm">
+    </div>
+    </div>
+ </div>
+ <br>
+ <!-- contact form -->
+
+    <div class="form4 top">
+    <div class="container">
+                    <form class="form">
+                        <div class="form-group"> <label class="sr-only">Name</label> <input type="text" class="form-control" required="" id="name" placeholder="Tu nombre"> </div>
+                        <div class="form-group"> <label class="sr-only">Email</label> <input type="email" class="form-control" required="" id="email" placeholder="Tu e-mail"> </div>
+                        <div class="form-group"> <label class="sr-only">Name</label> <textarea class="form-control" required="" rows="7" id="message" placeholder="Escríbenos.."></textarea> </div> <button type="submit" class="btn btn-secondary">Enviar mensaje</button>
+                    </form>
+    </div>
+</div>
+ </div>
+ <br><br>
+
+    
+
+
+    <!-- footer -->
 	<footer>
   <div class="container">
     <div class="row">

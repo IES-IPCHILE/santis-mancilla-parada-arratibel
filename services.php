@@ -26,8 +26,11 @@
                     <a class="nav-link" href="/santis-mancilla-parada-arratibel/services.php">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Conocenos</a>
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
                 </li>   
+                <li class="nav-item">
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
+                </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inicio">Iniciar Sesion</button>&nbsp;&nbsp;&nbsp;
