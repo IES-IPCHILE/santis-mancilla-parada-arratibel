@@ -12,66 +12,131 @@
 </head>
 <body>
     
-    <h1>CAMBIO DESDE LA RAMA MARCO A DEFAULT</h1>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <script></script>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">        
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/gallery.php">Galeria</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/services.php">Servicios</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
+                </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inicio">Iniciar Sesion</button>&nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registro">Registrar</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#i">Iniciar Sesion</button>
             </form>            
       </div>
-      <div class="modal fade" id="inicio">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal fade" id="i">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
       
             <!-- cabecera del diálogo -->
-            <div class="modal-header">
-              <h4 class="modal-title">Iniciar Sesion</h4>
-              <button type="button" class="close" data-dismiss="modal">X</button>
-            </div>
+			<div class="modal-header">
+				<ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#inicio" id="inicio-pills" data-toggle="pill" role="tab" aria-controls="inicio" aria-selected="true">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#registro" id="registro-pills" data-toggle="pill" role="tab" aria-controls="registro" aria-selected="false">Registrarse</a>
+                </li>					
+                </ul>
+				<button type="button" class="close" data-dismiss="modal">X</button>
+			  </div>
+			
+			  
       
             <!-- cuerpo del diálogo -->
             <div class="modal-body">
                 <div class="container-fluid">   
                     <form>
-                        <div class="form-group row">
-                          <label for="usuario" class="col-lg-3 col-form-label">usuario:</label>
-                          <div class="col-lg-9">
-                            <input type="text" class="form-control" id="usuario">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
-                          <div class="col-lg-9">
-                            <input type="password" class="form-control" id="clave">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="offset-lg-3 col-lg-9">
-                            <button type="submit" class="btn btn-primary">Ingresar</button>
-                          </div> 
-                        </div>
-                      </form>                    
+						<div class="tab-content">
+			  				<div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="inicio-pills">
+								<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Correo</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="correo">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
+                          	<div class="col-lg-9">
+                            	<input type="password" class="form-control" id="clave">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<div class="offset-lg-3 col-lg-9">
+                            	<button type="submit" class="btn btn-primary">Ingresar</button>
+                          	</div> 
+                        	</div>
+								</div>
+							<div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-pills">
+								<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Nombre Completo:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="nombre">
+                          	</div>
+                        	</div>
+								<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Correo:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="correo">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Nombre de Usuario:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="usuario">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
+                          	<div class="col-lg-9">
+                            	<input type="password" class="form-control" id="clave">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="clave" class="col-lg-3 col-form-label">Repetir Contraseña:</label>
+                          	<div class="col-lg-9">
+                            	<input type="password" class="form-control" id="clave">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Direccion:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="direccion">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">RUN:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="run">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Fono (+56):</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="fono">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<div class="offset-lg-3 col-lg-9">
+                            	<button type="submit" class="btn btn-primary">Registrar</button>
+                          	</div> 
+                        	</div>
+							</div>
+						</div>
+                        
+                      </form>					
                 </div>            
             </div>
             <div class="modal-footer">
@@ -79,50 +144,6 @@
             </div>
       
           </div>
-        </div>
-        
-        </div>
-		<div class="modal fade" id="registro">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-      
-            <!-- cabecera del diálogo -->
-            <div class="modal-header">
-              <h4 class="modal-title">Iniciar Sesion</h4>
-              <button type="button" class="close" data-dismiss="modal">X</button>
-            </div>
-      
-            <!-- cuerpo del diálogo -->
-            <div class="modal-body">
-                <div class="container-fluid">   
-                    <form>
-                        <div class="form-group row">
-                          <label for="usuario" class="col-lg-3 col-form-label">Usuario:</label>
-                          <div class="col-lg-9">
-                            <input type="text" class="form-control" id="usuario">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
-                          <div class="col-lg-9">
-                            <input type="password" class="form-control" id="clave">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="offset-lg-3 col-lg-9">
-                            <button type="submit" class="btn btn-primary">Registrar</button>
-                          </div> 
-                        </div>
-                      </form>                    
-                </div>            
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            </div>
-      
-          </div>
-        </div>
-        
         </div>
 		
     </nav>
@@ -182,51 +203,71 @@
 	</div>
 	<br>
 	
+  <!-- tabla -->
     
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre de servicio</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">ID Región</th>
+      <th scope="col">Fecha de creación</th>
+      <th scope="col">Edición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Soy</td>
+      <td>Un</td>
+      <td>Cuadrado</td>
+      <td><button type ="button" class="btn btn-secondary">Editar</button>
+      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Soy</td>
+      <td>Un</td>
+      <td>Rectángulo</td>
+      <td><button type ="button" class="btn btn-secondary">Editar</button>
+      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Soy</td>
+      <td>Una</td>
+      <td>Figura</td>
+      <td><button type ="button" class="btn btn-secondary">Editar</button>
+      <button type ="button" class="btn btn-secondary">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- footer -->
+	<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h6 class="text-muted lead">CONTACTO:</h6>
+            <h6 class="text-muted">
+            Casa Matriz N° 889<br>
+            Geronimo de alderete #890.<br>
+            Teléfonos: +56987526354 – 229765348.<br>
+            </h6>
+        </div>
+        <div class="col-xs-12 col-md-6">
+        <div class="pull-right">
+        <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+              <div class="redes-footer">
+                  <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
+                  <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
+                  <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
+              </div>
+        </div>
+        <div class="row"> <p class="text-muted small text-right">La Florida, Concha y Toro #660.</p></div>
     </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    <br>
-    <div class="jumbotron">
-        <h1 class="display-3">Promociones</h1>
-        <div class="mx-auto" style="width: 800px;">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    <img src=img/gato.jpg class="text-center" alt="gato">
-    </div>
-    </div>
-    <p class="text-center font-weight-bold">Hola chiquillos como tan</p>
+  </div>  
+</div>
+</footer>
 </body>
 </html>

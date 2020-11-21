@@ -27,10 +27,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
-                </li>   
+                </li>    
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
-                </li>     
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/contactus.php">Contacto</a>
+                </li>                 
                 </ul>
             <form class="form-inline my-2 my-lg-0">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inicio">Iniciar Sesion</button>&nbsp;&nbsp;&nbsp;
@@ -68,7 +68,7 @@
                             <button type="submit" class="btn btn-primary">Ingresar</button>
                           </div> 
                         </div>
-                      </form>                    
+                      </form>					
                 </div>            
             </div>
             <div class="modal-footer">
@@ -151,144 +151,39 @@
     </div>
     <br>
 
-    <!-- galería -->
-   
-    <div class="album py-5 bg-light">
-        <div class="container">
+    <!-- contáctanos -->
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv1.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Kayak en los estuarios de la patagonia.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv2.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Alpinismo cordillerano.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">18 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv3.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Escalando las montañas de Chile.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">27 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <h1>CONTÁCTANOS.</h1>
+    </div>
+    <div class="col-sm">
+    </div>
+    </div>
+ </div>
+ <br>
+ <!-- contact form -->
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv4.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Canopi en el bosque Valdiviano.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">36 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv5.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Senderismo en la Antártida.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">45 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv6.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Senderismo en Las Torres del Paine.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">59 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="form4 top">
+    <div class="container">
+                    <form class="form">
+                        <div class="form-group"> <label class="sr-only">Name</label> <input type="text" class="form-control" required="" id="name" placeholder="Tu nombre"> </div>
+                        <div class="form-group"> <label class="sr-only">Email</label> <input type="email" class="form-control" required="" id="email" placeholder="Tu e-mail"> </div>
+                        <div class="form-group"> <label class="sr-only">Name</label> <textarea class="form-control" required="" rows="7" id="message" placeholder="Escríbenos.."></textarea> </div> <button type="submit" class="btn btn-secondary">Enviar mensaje</button>
+                    </form>
+    </div>
+</div>
+ </div>
+ <br><br>
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv7.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Bicicleta por la carretera.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">89 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv8.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">¡Lo mejor del turismo aventura en Chile!</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">99 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv9.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Surfea las costas de Iquique.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">112 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer>
+    
+
+
+    <!-- footer -->
+	<footer>
   <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-6">
@@ -313,8 +208,5 @@
   </div>  
 </div>
 </footer>
-
-
-
 </body>
 </html>

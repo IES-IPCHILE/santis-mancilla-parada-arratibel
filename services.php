@@ -13,7 +13,7 @@
 <body>
     
     <script></script>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">        
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
@@ -29,7 +29,7 @@
                     <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
+                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/contactus.php">Contacto</a>
                 </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -150,145 +150,132 @@
         </a>
     </div>
     <br>
+    
+    <!-- primera fila de cartas -->
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 1</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <!-- carta -->
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 2</h5>
+    <p class="card-text">Servicio que ofrecemos</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 3</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    </div>
+ </div>
+ <br><br>
+<!-- fin primera fila de cartas -->
 
-    <!-- galería -->
-   
-    <div class="album py-5 bg-light">
-        <div class="container">
+ <!-- segunda fila de cartas -->
+ <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 4</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <!-- carta -->
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 5</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 6</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    </div>
+ </div>
+ <br><br>
+<!-- fin segunda fila de cartas -->
+ 
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv1.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Kayak en los estuarios de la patagonia.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv2.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Alpinismo cordillerano.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">18 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv3.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Escalando las montañas de Chile.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">27 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv4.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Canopi en el bosque Valdiviano.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">36 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv5.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Senderismo en la Antártida.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">45 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv6.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Senderismo en Las Torres del Paine.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">59 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv7.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Bicicleta por la carretera.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">89 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv8.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">¡Lo mejor del turismo aventura en Chile!</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">99 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="img/adv9.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Surfea las costas de Iquique.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">112 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer>
+  <!-- tercer fila de cartas -->
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 7</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <!-- carta -->
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 8</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <!-- carta -->
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Servicio 9</h5>
+    <p class="card-text">Servicio que ofrecemos.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    </div>
+ </div>
+ <br><br>
+<!-- fin tercer fila de cartas -->
+    
+    <footer>
   <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-6">
@@ -313,8 +300,5 @@
   </div>  
 </div>
 </footer>
-
-
-
 </body>
 </html>
