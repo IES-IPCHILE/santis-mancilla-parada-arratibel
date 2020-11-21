@@ -33,41 +33,109 @@
                 </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inicio">Iniciar Sesion</button>&nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registro">Registrar</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#i">Iniciar Sesion</button>
             </form>            
       </div>
-      <div class="modal fade" id="inicio">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal fade" id="i">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
       
             <!-- cabecera del diálogo -->
-            <div class="modal-header">
-              <h4 class="modal-title">Iniciar Sesion</h4>
-              <button type="button" class="close" data-dismiss="modal">X</button>
-            </div>
+			<div class="modal-header">
+				<ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#inicio" id="inicio-pills" data-toggle="pill" role="tab" aria-controls="inicio" aria-selected="true">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#registro" id="registro-pills" data-toggle="pill" role="tab" aria-controls="registro" aria-selected="false">Registrarse</a>
+                </li>					
+                </ul>
+				<button type="button" class="close" data-dismiss="modal">X</button>
+			  </div>
+			
+			  
       
             <!-- cuerpo del diálogo -->
             <div class="modal-body">
                 <div class="container-fluid">   
                     <form>
-                        <div class="form-group row">
-                          <label for="usuario" class="col-lg-3 col-form-label">usuario:</label>
-                          <div class="col-lg-9">
-                            <input type="text" class="form-control" id="usuario">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
-                          <div class="col-lg-9">
-                            <input type="password" class="form-control" id="clave">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="offset-lg-3 col-lg-9">
-                            <button type="submit" class="btn btn-primary">Ingresar</button>
-                          </div> 
-                        </div>
+						<div class="tab-content">
+			  				<div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="inicio-pills">
+								<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Correo</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="correo">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
+                          	<div class="col-lg-9">
+                            	<input type="password" class="form-control" id="clave">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<div class="offset-lg-3 col-lg-9">
+                            	<button type="submit" class="btn btn-primary">Ingresar</button>
+                          	</div> 
+                        	</div>
+								</div>
+							<div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-pills">
+								<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Nombre Completo:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="nombre">
+                          	</div>
+                        	</div>
+								<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Correo:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="correo">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Nombre de Usuario:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="usuario">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
+                          	<div class="col-lg-9">
+                            	<input type="password" class="form-control" id="clave">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="clave" class="col-lg-3 col-form-label">Repetir Contraseña:</label>
+                          	<div class="col-lg-9">
+                            	<input type="password" class="form-control" id="clave">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Direccion:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="direccion">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">RUN:</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="run">
+                          	</div>
+                        	</div>
+							<div class="form-group row">
+                          	<label for="usuario" class="col-lg-3 col-form-label">Fono (+56):</label>
+                          	<div class="col-lg-9">
+                            	<input type="text" class="form-control" id="fono">
+                          	</div>
+                        	</div>
+                        	<div class="form-group row">
+                          	<div class="offset-lg-3 col-lg-9">
+                            	<button type="submit" class="btn btn-primary">Registrar</button>
+                          	</div> 
+                        	</div>
+							</div>
+						</div>
+                        
                       </form>					
                 </div>            
             </div>
@@ -76,50 +144,6 @@
             </div>
       
           </div>
-        </div>
-        
-        </div>
-		<div class="modal fade" id="registro">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-      
-            <!-- cabecera del diálogo -->
-            <div class="modal-header">
-              <h4 class="modal-title">Iniciar Sesion</h4>
-              <button type="button" class="close" data-dismiss="modal">X</button>
-            </div>
-      
-            <!-- cuerpo del diálogo -->
-            <div class="modal-body">
-                <div class="container-fluid">   
-                    <form>
-                        <div class="form-group row">
-                          <label for="usuario" class="col-lg-3 col-form-label">Usuario:</label>
-                          <div class="col-lg-9">
-                            <input type="text" class="form-control" id="usuario">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
-                          <div class="col-lg-9">
-                            <input type="password" class="form-control" id="clave">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="offset-lg-3 col-lg-9">
-                            <button type="submit" class="btn btn-primary">Registrar</button>
-                          </div> 
-                        </div>
-                      </form>                    
-                </div>            
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            </div>
-      
-          </div>
-        </div>
-        
         </div>
 		
     </nav>
