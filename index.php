@@ -1,8 +1,10 @@
 <?php
-
 session_start();
 
 require("./resources/conexion.php");
+
+$_SESSION["id_user"];
+$_SESSION["id_rol"];
 
 ?>
 <!DOCTYPE html>
@@ -23,24 +25,37 @@ require("./resources/conexion.php");
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="/santis-mancilla-parada-arratibel/index.php">Inicio</a>
+          <a class="nav-link" href="./index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/santis-mancilla-parada-arratibel/gallery.php">Galeria</a>
+          <a class="nav-link" href="./gallery.php">Galeria</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/santis-mancilla-parada-arratibel/services.php">Servicios</a>
+          <a class="nav-link" href="./services.php">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
+          <a class="nav-link" href="./aboutus.php">Quiénes somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
+          <a class="nav-link" href="./aboutus.php">Contacto</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" action="inciar_sesion()">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#i">Iniciar Sesion</button>
-      </form>
+
+      <?php
+
+      if ($_SESSION["id_user"] == "") {
+        echo
+          "<form class='form-inline my-2 my-lg-0'>
+          <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#i'>Iniciar Sesion</button>
+          </form>";
+      } else {
+        echo 
+        "<form method='post' class='form-inline my-2 my-lg-0' action='./resources/iniciar_sesion.php'>
+        <button type='submit' class='btn btn-primary' name='logout'>Cerrar sesion</button>
+      </form>";
+      }
+      ?>
+      
     </div>
     <div class="modal fade" id="i">
       <div class="modal-dialog modal-dialog-centered">
@@ -212,9 +227,9 @@ require("./resources/conexion.php");
       <tr>
         <th scope="col">Nombre de servicio</th>
         <th scope="col">Descripción</th>
-        <th scope="col">ID Región</th>
+        <th scope="col">Región</th>
         <th scope="col">Fecha de creación</th>
-        <th scope="col">Edición</th>
+        <th scope="col" style="display:none">Edición</th>
       </tr>
     </thead>
     <tbody>
@@ -223,37 +238,36 @@ require("./resources/conexion.php");
       $conn = conectar();
 
       if ($conn) {
-        $query = "SELECT servicio.id, nombre_servicio, descripcion, r.Nombre from servicio join region as r on servicio.id_region = r.id where servicio.id_region = 0";
+        $query = "SELECT * from servicio join region as r on servicio.id_region = r.id where servicio.id_region = 0";
 
         $res = mysqli_query($conn, $query);
 
-        if (!empty($res) && mysqli_num_rows($res) > 0) {
-          $rows = mysqli_fetch_row($res);
+
+
+        if (mysqli_num_rows($res) > 0) {
+
           while ($row = mysqli_fetch_assoc($res)) {
+
             echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['nombre_servicio'] . "</td>";
+            echo "<th scope='row'>" . $row['nombre_servicio'] . "</th>";
             echo "<td>" . $row['descripcion'] . "</td>";
-            echo "<td>" . $row['r.Nombre'] . "</td>";
-            echo "</tr>";
+            echo "<td>" . $row['Nombre'] . "</td>";
+            echo "<td>" . $row['fecha_creacion'] . "</td>";
+            if ($_SESSION["id_user"] == $row['id_usuario'] or $_SESSION["id_rol"] == 3) {
+              echo "<td><button type ='button' class='btn btn-secondary'>Editar</button>";
+              echo "<button type ='button' class='btn btn-secondary'>Eliminar</button></td>";
+            }
+            echo "<tr>";
           }
-        } 
-        else {
+        } else {
           echo "<h1>NO HAY SERVICIOS EN ESTA REGION</H1>";
         }
       }
 
-      
+
 
 
       ?>
-        <th scope="row">3</th>
-        <td>Soy</td>
-        <td>Una</td>
-        <td>Figura</td>
-        <td><button type="button" class="btn btn-secondary">Editar</button>
-          <button type="button" class="btn btn-secondary">Eliminar</button></td>
-      </tr>
     </tbody>
   </table>
 

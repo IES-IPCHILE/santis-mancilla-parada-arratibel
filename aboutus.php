@@ -13,19 +13,19 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/index.php">Inicio</a>
+                    <a class="nav-link" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/gallery.php">Galeria</a>
+                    <a class="nav-link" href="gallery.php">Galeria</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/services.php">Servicios</a>
+                    <a class="nav-link" href="services.php">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
+                    <a class="nav-link" href="aboutus.php">Quiénes somos</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/contactus.php">Contacto</a>
+                    <a class="nav-link" href="contactus.php">Contacto</a>
                 </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">

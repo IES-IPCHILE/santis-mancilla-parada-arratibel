@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,24 +11,23 @@
     <script src="./js/bootstrap.bundle.min.js" ></script>
 </head>
 <body>
-  
     <nav class="navbar navbar-expand-sm navbar-light bg-light">        
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/index.php">Inicio</a>
+                    <a class="nav-link" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/gallery.php">Galeria</a>
+                    <a class="nav-link" href="gallery.php">Galeria</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/services.php">Servicios</a>
+                    <a class="nav-link" href="services.php">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Quiénes somos</a>
+                    <a class="nav-link" href="aboutus.php">Quiénes somos</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link" href="/santis-mancilla-parada-arratibel/aboutus.php">Contacto</a>
+                    <a class="nav-link" href="aboutus.php">Contacto</a>
                 </li>     
                 </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -154,6 +154,7 @@
     <div class="album py-5 bg-light">
         <div class="container">
 
+
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
@@ -169,6 +170,7 @@
                 </div>
               </div>
             </div>
+            
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="img/adv2.jpg" alt="Card image cap">
