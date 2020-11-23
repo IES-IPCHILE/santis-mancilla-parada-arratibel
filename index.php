@@ -3,9 +3,6 @@ session_start();
 
 require("./resources/conexion.php");
 
-$_SESSION["id_user"];
-$_SESSION["id_rol"];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,19 +40,20 @@ $_SESSION["id_rol"];
 
       <?php
 
-      if ($_SESSION["id_user"] == "") {
+      if (!isset($_SESSION["id_user"])) {
         echo
           "<form class='form-inline my-2 my-lg-0'>
           <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#i'>Iniciar Sesion</button>
           </form>";
       } else {
-        echo 
-        "<form method='post' class='form-inline my-2 my-lg-0' action='./resources/iniciar_sesion.php'>
-        <button type='submit' class='btn btn-primary' name='logout'>Cerrar sesion</button>
-      </form>";
+        echo
+          "<form method='post' class='form-inline my-2 my-lg-0' action='./resources/iniciar_sesion.php'>
+          <button type='submit' class='btn btn-primary' name='logout'>Cerrar sesion</button>
+        </form>";
       }
+
       ?>
-      
+
     </div>
     <div class="modal fade" id="i">
       <div class="modal-dialog modal-dialog-centered">
@@ -253,9 +251,11 @@ $_SESSION["id_rol"];
             echo "<td>" . $row['descripcion'] . "</td>";
             echo "<td>" . $row['Nombre'] . "</td>";
             echo "<td>" . $row['fecha_creacion'] . "</td>";
-            if ($_SESSION["id_user"] == $row['id_usuario'] or $_SESSION["id_rol"] == 3) {
-              echo "<td><button type ='button' class='btn btn-secondary'>Editar</button>";
-              echo "<button type ='button' class='btn btn-secondary'>Eliminar</button></td>";
+            if (isset($_SESSION["id_user"]) && isset($_SESSION["id_rol"])) {
+              if ($_SESSION["id_user"] == $row['id_usuario'] or $_SESSION["id_rol"] == 3) {
+                echo "<td><button type ='button' class='btn btn-secondary'>Editar</button></td>";
+                echo "<td><button type ='button' class='btn btn-secondary'>Eliminar</button></td>";
+              }
             }
             echo "<tr>";
           }
@@ -263,9 +263,6 @@ $_SESSION["id_rol"];
           echo "<h1>NO HAY SERVICIOS EN ESTA REGION</H1>";
         }
       }
-
-
-
 
       ?>
     </tbody>

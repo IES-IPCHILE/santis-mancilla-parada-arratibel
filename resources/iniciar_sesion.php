@@ -28,8 +28,8 @@
 
         }
         else if(isset($_POST['logout'])){
-            $_SESSION["id_user"] = "";
-            $_SESSION["id_rol"] = "";
+            unset($_SESSION["id_user"]);
+            unset($_SESSION["id_rol"]);
             header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
     }
