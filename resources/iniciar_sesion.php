@@ -60,16 +60,14 @@
                                 if ($row[0] == $_POST["correo"]) {
                                     echo "<p class='lead'>El correo que ingresó ya está en uso</p>";
                                 }
-                                if($row[1] == strtolower($_POST["usuario"])){
+                                if ($row[1] == strtolower($_POST["usuario"])) {
                                     echo "<p class='lead'>El usuario que ingresó ya está en uso</p>";
                                 }
-                            }
-                            else {
+                            } else {
                                 mysqli_query($conn, $command);
                                 echo "<h1 class='display-4'>Registro exitoso</h1>
                                 <p class='lead'>Te damos la bienvenida a nuestra plafaforma, " . $_POST["usuario"] .  ", ahora puedes iniciar sesion con tus datos</p>";
                             }
-
                         } else if (isset($_POST['logout'])) {
                             echo "<h1 class='display-4'>Adios, " . $_SESSION['username'] . "</h1>
                             <p class='lead'>Esperamos que vuelvas pronto!</p>";
