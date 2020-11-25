@@ -71,17 +71,36 @@ require("./resources/conexion.php");
             </ul>
             <button type="button" class="close" data-dismiss="modal">X</button>
           </div>
+          <script>
+            $(document).ready(function() {
+              var password = $("#register-password"),
+                confirm_password = $("#repeat-password");
 
+              function validatePassword() {
+
+                if (password.val() != confirm_password.val()) {
+                  confirm_password[0].setCustomValidity("Passwords Don't Match");
+                  confirm_password[0].reportValidity()
+                } else {
+                  confirm_password[0].setCustomValidity('');
+                }
+              }
+              password.change(validatePassword);
+              confirm_password.keyup(validatePassword);
+
+            })
+          </script>
           <!-- cuerpo del diálogo -->
           <div class="modal-body">
             <div class="container-fluid">
-              <form method="post" action="./resources/iniciar_sesion.php">
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="inicio-pills">
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="inicio-pills">
+                  <form method="POST" action="./resources/iniciar_sesion.php">
                     <div class="form-group row">
                       <label for="usuario" class="col-lg-3 col-form-label">Correo</label>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" name="login-correo">
+                        <input type="email" class="form-control" name="login-correo">
                       </div>
                     </div>
                     <div class="form-group row">
@@ -95,64 +114,72 @@ require("./resources/conexion.php");
                         <button type="submit" class="btn btn-primary" name="login">Ingresar</button>
                       </div>
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-pills">
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-pills">
+                  <form method="POST" action="./resources/iniciar_sesion.php">
                     <div class="form-group row">
                       <label for="usuario" class="col-lg-3 col-form-label">Nombre Completo:</label>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" id="nombre">
+                        <input type="text" class="form-control" name="nombre" required>
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="usuario" class="col-lg-3 col-form-label">Correo:</label>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" id="correo">
+                        <input type="text" class="form-control" name="correo">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="usuario" class="col-lg-3 col-form-label">Nombre de Usuario:</label>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" id="usuario">
+                        <input type="text" class="form-control" name="usuario" required>
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="clave" class="col-lg-3 col-form-label">Contraseña:</label>
                       <div class="col-lg-9">
-                        <input type="password" class="form-control" id="clave">
+                        <input type="password" class="form-control" name="register-password" id="register-password" require>
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="clave" class="col-lg-3 col-form-label">Repetir Contraseña:</label>
                       <div class="col-lg-9">
-                        <input type="password" class="form-control" id="clave">
+                        <input type="password" class="form-control" name="repeat-password" id="repeat-password" require>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="usuario" class="col-lg-3 col-form-label">Direccion:</label>
+                      <label for="usuario" class="col-lg-3 col-form-label">Direccion:</label required>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" id="direccion">
+                        <input type="text" class="form-control" name="direccion" required>
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="usuario" class="col-lg-3 col-form-label">RUN:</label>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" id="run">
+                        <input type="text" class="form-control" name="run" required>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="usuario" class="col-lg-3 col-form-label">Fecha de nacimiento:</label>
+                      <div class="col-lg-9">
+                        <input type="date" class="form-control" name="fecha_nac" id="fecha_nac" required>
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="usuario" class="col-lg-3 col-form-label">Fono (+56):</label>
                       <div class="col-lg-9">
-                        <input type="text" class="form-control" id="fono">
+                        <input type="text" class="form-control" name="fono" required>
                       </div>
                     </div>
                     <div class="form-group row">
                       <div class="offset-lg-3 col-lg-9">
-                        <button type="submit" class="btn btn-primary">Registrar</button>
+                        <button type="text" class="btn btn-primary" name="register" id="register">Registrar</button>
                       </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
