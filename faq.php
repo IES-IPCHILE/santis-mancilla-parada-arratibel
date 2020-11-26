@@ -221,145 +221,110 @@ require("./resources/conexion.php");
   </div>
   <br>
 
-  <!-- galería -->
+ <!-- faq section -->
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+ <div class="container py-3">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <div class="accordion" id="faqExample">
+                <div class="card">
+                    <div class="card-header p-2" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              P: ¿Qué pasa si quiero cancelar mi servicio?
+                            </button>
+                          </h5>
+                    </div>
 
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                        <div class="card-body">
+                            <b>Respuesta:</b> Debes avisar mediante correo con dos semanas de anticipación.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header p-2" id="headingTwo">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          P: ¿Puedo recibir un reembolso total si me arrepiento de contratar el servicio?
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                        <div class="card-body">
+                            Te retendremos un 10% del valor del servicio por costos de gestión.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header p-2" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              P: ¿Con qué medios puedo pagar?
+                            </button>
+                          </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                        <div class="card-body">
+                            Aceptamos tarjetas de crédito, débito nacional, y PayPal.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header p-2" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              P: ¿Hacen precios por multitud de personas accediendo a un servicio?
+                            </button>
+                          </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                        <div class="card-body">
+                            Si son más de cinco personas, puedes contactárnos para un descuento.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Kayak en los estuarios de la patagonia.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
         </div>
+    </div>
+    <!--/row-->
+</div>
+<!--container-->
+<!-- end faq section -->
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Alpinismo cordillerano.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">18 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Escalando las montañas de Chile.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">27 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+ <!-- formulario FAQ título -->
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv4.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Canopi en el bosque Valdiviano.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">36 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv5.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Senderismo en la Antártida.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">45 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv6.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Senderismo en Las Torres del Paine.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">59 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+<br><br>
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv7.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Bicicleta por la carretera.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">89 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv8.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">¡Lo mejor del turismo aventura en Chile!</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">99 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv9.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Surfea las costas de Iquique.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">112 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <h1>CONSULTA.</h1>
+      </div>
+      <div class="col-sm">
       </div>
     </div>
   </div>
+  <br>
+  <!-- contact form -->
+
+  <div class="form4 top">
+    <div class="container">
+      <form class="form">
+        <div class="form-group"> <label class="sr-only">Name</label> <input type="text" class="form-control" required="" id="name" placeholder="Tu nombre"> </div>
+        <div class="form-group"> <label class="sr-only">Email</label> <input type="email" class="form-control" required="" id="email" placeholder="Tu e-mail"> </div>
+        <div class="form-group"> <label class="sr-only">Name</label> <textarea class="form-control" required="" rows="7" id="message" placeholder="Escríbenos.."></textarea> </div> <button type="submit" class="btn btn-secondary">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <br><br>
+
+  <!-- fin formulario FAQ -->
+
   <footer>
     <div class="container">
       <div class="row">
@@ -387,6 +352,7 @@ require("./resources/conexion.php");
       </div>
     </div>
   </footer>
+
 
 
 
