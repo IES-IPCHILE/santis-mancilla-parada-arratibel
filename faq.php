@@ -228,7 +228,7 @@ require("./resources/conexion.php");
         <div class="col-10 mx-auto">
             <div class="accordion" id="faqExample">
                 <div class="card">
-                    <div class="card-header p-2" id="headingOne">
+                    <div class="card-header p-2" id="uno">
                         <h5 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                               P: ¿Qué pasa si quiero cancelar mi servicio?
@@ -236,49 +236,49 @@ require("./resources/conexion.php");
                           </h5>
                     </div>
 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="uno" data-parent="#faqExample">
                         <div class="card-body">
                             <b>Respuesta:</b> Debes avisar mediante correo con dos semanas de anticipación.
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header p-2" id="headingTwo">
+                    <div class="card-header p-2" id="dos">
                         <h5 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           P: ¿Puedo recibir un reembolso total si me arrepiento de contratar el servicio?
                         </button>
                       </h5>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="dos" data-parent="#faqExample">
                         <div class="card-body">
                             Te retendremos un 10% del valor del servicio por costos de gestión.
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header p-2" id="headingThree">
+                    <div class="card-header p-2" id="tres">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                               P: ¿Con qué medios puedo pagar?
                             </button>
                           </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                    <div id="collapseThree" class="collapse" aria-labelledby="tres" data-parent="#faqExample">
                         <div class="card-body">
                             Aceptamos tarjetas de crédito, débito nacional, y PayPal.
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header p-2" id="headingThree">
+                    <div class="card-header p-2" id="cuatro">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
                               P: ¿Hacen precios por multitud de personas accediendo a un servicio?
                             </button>
                           </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                    <div id="collapsefour" class="collapse" aria-labelledby="cuatro" data-parent="#faqExample">
                         <div class="card-body">
                             Si son más de cinco personas, puedes contactárnos para un descuento.
                         </div>
