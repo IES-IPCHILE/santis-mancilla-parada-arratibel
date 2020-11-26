@@ -193,6 +193,7 @@ require("./resources/conexion.php");
       </div>
 
   </nav>
+  <!-- inicio carrusel -->
   <div id="carouselId" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselId" data-slide-to="0" class="active"></li>
@@ -219,84 +220,132 @@ require("./resources/conexion.php");
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-4 content1-left"></div>
-    <div class="col-sm-4 content1-center">
-      <a class="text-center font-weight-bold">Seleccionar una Region:</a>
+  <!-- fin carrusel -->
+  <br><br>
 
-      <select name="regiones" id="regiones">
-        <option values="0">Arica</a>
-        <option values="1">Tarapacá</a>
-        <option values="2">Antofagasta</a>
-        <option values="3">Atacama</a>
-        <option values="4">Coquimbo</a>
-        <option values="5">Valparaiso</a>
-        <option values="6">Santiago</a>
-        <option values="7">O'Higgins</a>
-        <option values="8">El Maule</a>
-        <option values="9">Ñuble</a>
-        <option values="10">Biobio</a>
-        <option values="11">La Araucanía</a>
-        <option values="12">Los Ríos</a>
-        <option values="13">Los Lagos</a>
-        <option values="14">Aysen</a>
-        <option values="15">Magallanes</a>
-      </select>
-
+ <!-- primera fila de cartas -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 1</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 2</h5>
+            <p class="card-text">Servicio que ofrecemos</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 3</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4 content1-right"></div>
   </div>
-  <br>
+  <br><br>
+  <!-- fin primera fila de cartas -->
 
-  <!-- tabla -->
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Nombre de servicio</th>
-        <th scope="col">Descripción</th>
-        <th scope="col">Región</th>
-        <th scope="col">Fecha de creación</th>
-        <th scope="col" style="display:none">Edición</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
+  <!-- segunda fila de cartas -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 4</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 5</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 6</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <!-- fin segunda fila de cartas -->
 
-      $conn = conectar();
 
-      if ($conn) {
-        $query = "SELECT * from servicio join region as r on servicio.id_region = r.id where servicio.id_region = 0";
-
-        $res = mysqli_query($conn, $query);
-
-
-
-        if (mysqli_num_rows($res) > 0) {
-
-          while ($row = mysqli_fetch_assoc($res)) {
-
-            echo "<tr>";
-            echo "<th scope='row'>" . $row['nombre_servicio'] . "</th>";
-            echo "<td>" . $row['descripcion'] . "</td>";
-            echo "<td>" . $row['Nombre'] . "</td>";
-            echo "<td>" . $row['fecha_creacion'] . "</td>";
-            if (isset($_SESSION["id_user"]) && isset($_SESSION["id_rol"])) {
-              if ($_SESSION["id_user"] == $row['id_usuario'] or $_SESSION["id_rol"] == 3) {
-                echo "<td><button type ='button' class='btn btn-secondary'>Editar</button></td>";
-                echo "<td><button type ='button' class='btn btn-secondary'>Eliminar</button></td>";
-              }
-            }
-            echo "<tr>";
-          }
-        } else {
-          echo "<h1>NO HAY SERVICIOS EN ESTA REGION</H1>";
-        }
-      }
-
-      ?>
-    </tbody>
-  </table>
+  <!-- tercer fila de cartas -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 7</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 8</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <!-- carta -->
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Servicio 9</h5>
+            <p class="card-text">Servicio que ofrecemos.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <!-- fin tercer fila de cartas -->
 
   <!-- footer -->
   <footer>
