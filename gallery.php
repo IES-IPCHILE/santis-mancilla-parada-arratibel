@@ -34,7 +34,7 @@ require("./resources/conexion.php");
           <a class="nav-link" href="./aboutus.php">Quiénes somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./aboutus.php">Contacto</a>
+          <a class="nav-link" href="./contactus.php">Contacto</a>
         </li>
       </ul>
 
