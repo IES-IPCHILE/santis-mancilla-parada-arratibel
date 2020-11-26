@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+require("./resources/conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,155 +155,91 @@
         </a>
     </div>
     <br>
+    <hr>
+    <h1 class="text-center">NUESTROS SERVICIOS:</h1>
+    <br>
     
-    <!-- primera fila de cartas -->
+    <?php
+
+      $conn = conectar();
+
+      if ($conn) {$query = "SELECT * from servicio join region as r on servicio.id_region = r.id where servicio.id_region = 0";
+
+      $res = mysqli_query($conn, $query);
+
+      if (mysqli_num_rows($res) > 0) {
+
+        while ($row = mysqli_fetch_assoc($res)) {
+
+          echo "<tr>";
+          echo "<th scope='row'>" . $row['nombre_servicio'] . "</th>";
+          echo "<td>" . $row['descripcion'] . "</td>";
+          echo "<td>" . $row['Nombre'] . "</td>";
+          echo "<td>" . $row['fecha_creacion'] . "</td>";
+
+
+          echo"<div class='container'>";
+          echo"<div class='col-md'>";
+          echo"<div class='card border-default'>";
+          echo"<div class='card-body'>";
+          echo"<table>";
+          echo"<tr>";
+          echo"<td width='300px'><img src = 'img/trekking2.jpg' width='300px' height='300px'></td>";
+          echo"<td width='25px'></td>";
+          echo"<td width='800px' style='vertical-align: top;'>";
+          echo"<h2>TREKKING</h2><hr>";
+          echo"<p>Info</p>";
+          echo"<p>Info</p>";
+          echo"<p>Info</p>";
+          echo"<p>Info</p>";
+          echo"<p>Info</p>";
+          echo"</td>";
+          echo"</tr>";
+          echo"</table>";
+          echo"</div>";
+          echo"</div>";
+          echo"</div>";
+          echo"</div>";
+          echo"<br>";
+          
+        } else {
+          echo "<h1>NO HAY SERVICIOS EN ESTA REGION</H1>";
+        }
+      }
+
+    
+
+    ?>
+
+
+     <!-- footer -->
+  <footer>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    <!-- carta -->
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 1</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-      <!-- carta -->
-      <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 2</h5>
-    <p class="card-text">Servicio que ofrecemos</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-    <!-- carta -->
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 3</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    </div>
- </div>
- <br><br>
-<!-- fin primera fila de cartas -->
-
- <!-- segunda fila de cartas -->
- <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    <!-- carta -->
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 4</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-      <!-- carta -->
-      <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 5</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-    <!-- carta -->
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 6</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    </div>
- </div>
- <br><br>
-<!-- fin segunda fila de cartas -->
- 
-
-  <!-- tercer fila de cartas -->
-  <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    <!-- carta -->
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 7</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-      <!-- carta -->
-      <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 8</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm">
-    <!-- carta -->
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Servicio 9</h5>
-    <p class="card-text">Servicio que ofrecemos.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    </div>
- </div>
- <br><br>
-<!-- fin tercer fila de cartas -->
-    
-    <footer>
-  <div class="container">
-    <div class="row">
+      <div class="row">
         <div class="col-xs-12 col-md-6">
-            <h6 class="text-muted lead">CONTACTO:</h6>
-            <h6 class="text-muted">
+          <h6 class="text-muted lead">CONTACTO:</h6>
+          <h6 class="text-muted">
             Casa Matriz N° 889<br>
             Geronimo de alderete #890.<br>
             Teléfonos: +56987526354 – 229765348.<br>
-            </h6>
+          </h6>
         </div>
         <div class="col-xs-12 col-md-6">
-        <div class="pull-right">
-        <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
-              <div class="redes-footer">
-                  <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
-                  <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
-                  <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
-              </div>
+          <div class="pull-right">
+            <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+            <div class="redes-footer">
+              <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
+              <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
+              <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
+            </div>
+          </div>
+          <div class="row">
+            <p class="text-muted small text-right">La Florida, Concha y Toro #660.</p>
+          </div>
         </div>
-        <div class="row"> <p class="text-muted small text-right">La Florida, Concha y Toro #660.</p></div>
+      </div>
     </div>
-  </div>  
-</div>
-</footer>
+  </footer>
 </body>
+
 </html>
