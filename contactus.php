@@ -79,7 +79,7 @@ require("./resources/conexion.php");
               function validatePassword() {
 
                 if (password.val() != confirm_password.val()) {
-                  confirm_password[0].setCustomValidity("Passwords Don't Match");
+                  confirm_password[0].setCustomValidity("Las contraseñas no coinciden");
                   confirm_password[0].reportValidity()
                 } else {
                   confirm_password[0].setCustomValidity('');
