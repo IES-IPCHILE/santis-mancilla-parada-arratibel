@@ -11,10 +11,16 @@ require("./resources/conexion.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+
   <script src="./js/jquery-3.5.1.slim.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
+
+
+  
+
 </head>
 
 <body>
@@ -83,7 +89,7 @@ require("./resources/conexion.php");
 
                 if (password.val() != confirm_password.val()) {
                   confirm_password[0].setCustomValidity("Las contraseñas no coinciden");
-                  confirm_password[0].reportValidity()
+                  confirm_password[0].reportValidity();
                 } else {
                   confirm_password[0].setCustomValidity('');
                 }
@@ -221,61 +227,137 @@ require("./resources/conexion.php");
     </a>
   </div>
   <!-- fin carrusel -->
+
   <br>
- <!-- tabla -->
- <div class="container">
- <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nombre de servicio</th>
-        <th scope="col">Descripción</th>
-        <th scope="col">Región</th>
-        <th scope="col">Fecha de creación</th>
-        <th scope="col" style="display:none">Edición</th>
-      </tr>
-    </thead>
+
   <?php
 
-      $conn = conectar();
+$id = $_POST['botonIr'];
 
-      if ($conn) {
-        $query = "SELECT servicio.id, servicio.nombre_servicio, servicio.descripcion, region.Nombre, servicio.fecha_creacion, servicio.id_usuario from servicio join region on region.id= servicio.id_region join usuario on servicio.id_usuario= usuario.id ORDER BY servicio.id ASC";
+$conn = conectar();
 
-        $res = mysqli_query($conn, $query);
+if ($conn) {
+  
+$query = "SELECT servicio.imagen, servicio.nombre_servicio, servicio.descripcion from servicio where servicio.id=$id";
+$res = mysqli_query($conn, $query);
+
+if (mysqli_num_rows($res) > 0) {
+
+  while ($row = mysqli_fetch_assoc($res)) {
+
+    echo"<div class='container'>";
+    echo"<div class='col-md'>";
+    echo"<div class='card border-default'>";
+    echo"<div class='card-body'>";
+    echo"<table>";
+    echo"<tr>";
+    echo"<td width='300px'>";
+    ?>
+    <img class="card-img-top img-thumbnail" style="height:300px" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['imagen']); ?>">
+    <?php
+    echo"</td>";
+    echo"<td width='25px'></td>";
+    echo"<td width='800px' style='vertical-align: top;'><h1>" . $row['nombre_servicio'] . "</h1>";
+    echo"<hr>";
+    echo"<p>" . $row['descripcion'] . "</p>";
+    echo"</td>";
+    echo"</tr>";
+    echo"</table>";
+    echo"</div>";
+    echo"</div>";
+    echo"</div>";
+    echo"</div>";
+    echo"<br>";
+
+}
+}else{
+    echo"<h1>NO EXISTE REGISTRO.</h1>";
+}
+}
+
+?>       
+  
+  <div class="container">
+    <div>
+        <h3>Selección Packs de Servicios.</h3><br>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <h3>Pack Basico</h3> <span class="plan-currency">$</span> <span class="value">9.990</span>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Transporte hacia el lugar.</li>
+                    <li>Cantidad de personas Incluidas 2-3</li>
+                    <li class="text-muted"><del>Guía Incluido</del></li>
+                    <li class="text-muted"><del>Almuerzo Incluido</del></li>
+                </ul>
+                <button class="container btn btn-primary">Pagar</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm">
+        <div class="card">
+            <div class="card-header bg-success">
+                <h3>Pack Normal</h3> <span class="plan-currency">$</span> <span class="value">16.990</span>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Transporte hacia el lugar.</li>
+                    <li>Cantidad de personas Incluidas 3-4</li>
+                    <li class="text-muted"><del>Guía Incluido</del></li>
+                    <li class="text-muted"><del>Almuerzo Incluido</del></li>
+                </ul>
+                <button class="container btn btn-success">Pagar</button>  
+                             
+            </div>
+        </div>
+        </div>    
+        <div class="col-sm">
+        <div class="card">
+            <div class="card-header bg-warning">
+                <h3>Pack Vip</h3> <span class="plan-currency">$</span> <span class="value">24.990</span>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Transporte hacia el lugar.</li>
+                    <li>Cantidad de personas Incluidas 4-5</li>
+                    <li>Guía Incluido</li>
+                    <li class="text-muted"><del>Almuerzo Incluido</del></li>
+                </ul>
+                <button class="container btn btn-warning">Pagar</button>
+            </div>
+        </div>
+        </div>        
+        <div class="col-sm">
+        <div class="card">
+            <div class="card-header bg-danger">
+                <h3>Pack Premium</h3> <span class="plan-currency">$</span> <span class="value">32.990</span>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Transporte hacia el lugar.</li>
+                    <li>Cantidad de personas Incluidas 4-5</li>
+                    <li>Guía Incluido</li>
+                    <li>Almuerzo Incluido</li>
+                </ul>
+                <button class="container btn btn-danger">Pagar</button>
+            </div>
+        </div>
+        </div>        
+    </div>
+</div>
 
 
 
-        if (mysqli_num_rows($res) > 0) {
 
-          while ($row = mysqli_fetch_assoc($res)) {
 
-            echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
-            echo "<th scope='row'>" . $row['nombre_servicio'] . "</th>";
-            echo "<td>" . $row['descripcion'] . "</td>";
-            echo "<td>" . $row['Nombre'] . "</td>";
-            echo "<td>" . $row['fecha_creacion'] . "</td>";
-            echo "<td><form action='servicioDetalle.php' method='POST'><button type='submit' class='btn btn-success' name='botonIr' value='". $row['id'] ."'>IR</button></form></td>";
-            if (isset($_SESSION["id_user"]) && isset($_SESSION["id_rol"])) {
-              if ($_SESSION["id_user"] == $row['id_usuario'] or $_SESSION["id_rol"] == 3) {
-                echo "<td><button type ='button' class='btn btn-secondary'>Editar</button></td>";
-                echo "<td><button type ='button' class='btn btn-secondary'>Eliminar</button></td>";
-              }
-            }
-            echo "<tr>";
-          }
-        } else {
-          echo "<h1>NO HAY SERVICIOS EN ESTA REGION</H1>";
-        }
-      }
 
-      ?>
-    </tbody>
-  </table>
-  </div>
-  <!--fin tabla -->
 
+
+  
   <footer>
     <div class="container">
       <div class="row">
@@ -302,9 +384,11 @@ require("./resources/conexion.php");
         </div>
       </div>
     </div>
-    
-
   </footer>
+
+
+
 </body>
+
 
 </html>
