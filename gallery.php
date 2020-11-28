@@ -224,7 +224,7 @@ require("./resources/conexion.php");
   <div id="editar" class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
-        <form enctype="multipart/form-data" method="POST" action="./resources/imagen.php" >
+        <form enctype="multipart/form-data" method="POST" action="./resources/imagen.php">
           <div class="modal-header">
             <h4 class="modal-title">Editar imagen</h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -284,6 +284,29 @@ require("./resources/conexion.php");
     </div>
   </div>
 
+
+  <div id="eliminar" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">¿Estás seguro?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <form method="POST" action="./resources/imagen.php">
+          <div class="modal-body">
+            <p>¿Seguro que quieres borrar esta imagen?</p>
+            <p class="text-warning"><small>Si lo borras, puede que no se pueda volver a recuperar.</small></p>
+            <input type="hidden" name="id" id="idEliminarImagen" value="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-danger" id="eliminarImagen" name="eliminarImagen">Eliminar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- galería -->
 
 
@@ -292,7 +315,6 @@ require("./resources/conexion.php");
   <!-- Botón en HTML (lanza el modal en Bootstrap) -->
 
   <script>
-
     let editarImagen = (titulo, id) => {
       $("#idEditarImagen").val(id);
       $("#tituloEditarImagen").val(titulo);
@@ -301,7 +323,6 @@ require("./resources/conexion.php");
     let eliminarImagen = (id) => {
       $("#idEliminarImagen").val(id);
     }
-
   </script>
   <div class="album py-5 bg-light">
     <div class="container">
@@ -328,10 +349,15 @@ require("./resources/conexion.php");
                 <div class="card-body">
                   <p class="card-text">' . $row['titulo'] . '</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="#editar" class="btn btn-sm btn-outline-secondary" data-toggle="modal" onclick="editarImagen(\'' . $row["titulo"] . '\',' . $row["id"] . ')">Editar</a>
-                      <a href="#editar" class="btn btn-sm btn-outline-danger" data-toggle="modal" onclick="eliminarImagen(' . $row["id"] . ')">Eliminar</a>
-                    </div>
+                    <div class="btn-group">';
+            if (isset($_SESSION["id_rol"])) {
+              if ($_SESSION["id_rol"] == 3) {
+                echo '<a href="#editar" class="btn btn-sm btn-outline-secondary" data-toggle="modal" onclick="editarImagen(\'' . $row["titulo"] . '\',' . $row["id"] . ')">Editar</a>
+                        <a href="#eliminar" class="btn btn-sm btn-outline-danger" data-toggle="modal" onclick="eliminarImagen(' . $row["id"] . ')">Eliminar</a>';
+              }
+            }
+
+            echo ' </div>
                     <small class="text-muted">Subida el ' . explode(" ", $row["fecha"])[0] . '</small>
                   </div>
                 </div>
@@ -342,8 +368,8 @@ require("./resources/conexion.php");
           }
         }
 
-        if(isset($_SESSION["id_rol"])){
-          if($_SESSION["id_rol"] == 3){
+        if (isset($_SESSION["id_rol"])) {
+          if ($_SESSION["id_rol"] == 3) {
 
             echo '
             <div class="col-md-4">
@@ -366,7 +392,6 @@ require("./resources/conexion.php");
             </div>
             
             ';
-
           }
         }
 

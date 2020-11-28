@@ -23,83 +23,109 @@
                     session_start();
 
                     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        if (isset($_SESSION["id_rol"])) {
 
-                        require_once("conexion.php");
-                        $conn = conectar();
+                            if ($_SESSION["id_rol"] == 3) {
 
-                        if (isset($_POST["agregarImagen"])) {
 
-                            $check = getimagesize($_FILES["imagen"]["tmp_name"]);
 
-                            if ($check !== false) {
+                                require_once("conexion.php");
+                                $conn = conectar();
+                                //Agregar imagen
+                                if (isset($_POST["agregarImagen"])) {
 
-                                $imagen = $_FILES['imagen']['tmp_name'];
+                                    $check = getimagesize($_FILES["imagen"]["tmp_name"]);
 
-                                $imgContent = addslashes(file_get_contents($imagen));
+                                    if ($check !== false) {
 
-                                $command = 'INSERT into imagen(imagen, titulo, fecha) VALUES ("' . $imgContent . '", "' . $_POST["titulo"] . '", curdate())';
+                                        $imagen = $_FILES['imagen']['tmp_name'];
 
-                                $insert = mysqli_query($conn, $command);
+                                        $imgContent = addslashes(file_get_contents($imagen));
 
-                                if ($insert) {
+                                        $command = 'INSERT into imagen(imagen, titulo, fecha) VALUES ("' . $imgContent . '", "' . $_POST["titulo"] . '", curdate())';
 
-                                    echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
-                                    echo "<p class='lead'>Se ha agregado la imagen correctamente!</p>";
-                                } else {
+                                        $insert = mysqli_query($conn, $command);
 
-                                    echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
-                                    echo "<p class='lead'>No ha sido posible agregar la imagen</p>";
-                                }
-                            } else {
+                                        if ($insert) {
 
-                                echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
-                                echo "<p class='lead'>Por favor selecciona una imagen</p>";
-                            }
-                        } else if (isset($_POST["editarImagen"])) {
+                                            echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
+                                            echo "<p class='lead'>Se ha agregado la imagen correctamente!</p>";
+                                        } else {
 
-                            if (isset($_FILES["imagen"]["tmp_name"])) {
-
-                                $check = getimagesize($_FILES["imagen"]["tmp_name"]);
-
-                                if ($check !== false) {
-
-                                    $imagen = $_FILES['imagen']['tmp_name'];
-
-                                    $imgContent = addslashes(file_get_contents($imagen));
-
-                                    $command = 'UPDATE imagen SET imagen = "' . $imgContent . '", titulo = "' . $_POST["titulo"] . '", fecha = curdate() where id = ' . $_POST["id"] . ';';
-                                    
-                                    $update = mysqli_query($conn, $command);
-
-                                    if ($update) {
-
-                                        echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
-                                        echo "<p class='lead'>Se han actualizado los datos correctamente!</p>";
+                                            echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
+                                            echo "<p class='lead'>No ha sido posible agregar la imagen</p>";
+                                        }
                                     } else {
 
                                         echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
-                                        echo "<p class='lead'>No se han podido actualizar los datos</p>";
+                                        echo "<p class='lead'>Por favor selecciona una imagen</p>";
                                     }
-                                } else {
+                                    //editar imagen
+                                } else if (isset($_POST["editarImagen"])) {
 
-                                    echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
-                                    echo "<p class='lead'>Por favor selecciona una imagen</p>";
+                                    if (isset($_FILES["imagen"]["tmp_name"])) {
+
+                                        $check = getimagesize($_FILES["imagen"]["tmp_name"]);
+
+                                        if ($check !== false) {
+
+                                            $imagen = $_FILES['imagen']['tmp_name'];
+
+                                            $imgContent = addslashes(file_get_contents($imagen));
+
+                                            $command = 'UPDATE imagen SET imagen = "' . $imgContent . '", titulo = "' . $_POST["titulo"] . '", fecha = curdate() where id = ' . $_POST["id"] . ';';
+
+                                            $update = mysqli_query($conn, $command);
+
+                                            if ($update) {
+
+                                                echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
+                                                echo "<p class='lead'>Se han actualizado los datos correctamente!</p>";
+                                            } else {
+
+                                                echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
+                                                echo "<p class='lead'>No se han podido actualizar los datos</p>";
+                                            }
+                                        } else {
+
+                                            echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
+                                            echo "<p class='lead'>Por favor selecciona una imagen</p>";
+                                        }
+                                    } else {
+
+                                        $command = 'UPDATE imagen SET titulo = "' . $_POST["titulo"] . '" where id = ' . $_POST["id"] . ';';
+
+                                        $update = mysqli_query($conn, $command);
+
+                                        if ($update) {
+
+                                            echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
+                                            echo "<p class='lead'>Se han actualizado los datos correctamente!</p>";
+                                        } else {
+
+                                            echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
+                                            echo "<p class='lead'>No se han podido actualizar los datos</p>";
+                                        }
+                                    }
+                                } else if (isset($_POST["eliminarImagen"])) {
+
+                                    $command = "DELETE FROM imagen WHERE id = " . $_POST['id'] . ";";
+
+                                    $delete = mysqli_query($conn, $command);
+
+                                    if ($delete) {
+
+                                        echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
+                                        echo "<p class='lead'>Se ha eliminado la imagen correctamente!</p>";
+                                    } else {
+
+                                        echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
+                                        echo "<p class='lead'>No se ha podido eliminar la imagen</p>";
+                                    }
                                 }
-                            } else {
-
-                                $command = 'UPDATE imagen SET titulo = "' . $_POST["titulo"] . '" where id = ' . $_POST["id"] . ';';
-
-                                $update = mysqli_query($conn, $command);
-
-                                if ($update) {
-
-                                    echo "<h1 class='display-4'>Ejecucion exitosa:</h1>";
-                                    echo "<p class='lead'>Se han actualizado los datos correctamente!</p>";
-                                } else {
-
-                                    echo "<h1 class='display-4'>Ejecucion fallida:</h1>";
-                                    echo "<p class='lead'>No se han podido actualizar los datos</p>";
-                                }
+                            }else{
+                                echo "<h1 class='display-4'>Error:</h1>";
+                                echo "<p class='lead'>No eres administrador como para ejecutar esta operacion >:( !</p>";
                             }
                         }
                     }
