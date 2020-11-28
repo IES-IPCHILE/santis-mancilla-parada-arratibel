@@ -188,7 +188,6 @@ require("./resources/conexion.php");
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           </div>
-
         </div>
       </div>
 
@@ -221,142 +220,158 @@ require("./resources/conexion.php");
   </div>
   <br>
 
+  <!-- Modal / Ventana / Overlay en HTML -->
+  <div id="editar" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form enctype="multipart/form-data" method="POST" action="./resources/imagen.php" >
+          <div class="modal-header">
+            <h4 class="modal-title">Editar imagen</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row">
+              <label for="usuario" class="col-lg-2 col-form-label">Imagen:</label>
+              <div class="col-lg-10">
+                <input type="file" class="form-control" name="imagen">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="usuario" class="col-lg-2 col-form-label">Titulo:</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" name="titulo" id="tituloEditarImagen">
+              </div>
+            </div>
+            <input type="hidden" name="id" id="idEditarImagen" value="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" name="editarImagen">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="agregar" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method="POST" action="./resources/imagen.php" enctype="multipart/form-data">
+          <div class="modal-header">
+            <h4 class="modal-title">Agregar imagen</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row">
+              <label for="usuario" class="col-lg-2 col-form-label">Imagen:</label>
+              <div class="col-lg-10">
+                <input type="file" class="form-control" name="imagen" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="usuario" class="col-lg-2 col-form-label">Titulo:</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" name="titulo" id="tituloAgregarImagen" required>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" name="agregarImagen">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- galería -->
 
+
+
+
+  <!-- Botón en HTML (lanza el modal en Bootstrap) -->
+
+  <script>
+
+    let editarImagen = (titulo, id) => {
+      $("#idEditarImagen").val(id);
+      $("#tituloEditarImagen").val(titulo);
+    }
+
+    let eliminarImagen = (id) => {
+      $("#idEliminarImagen").val(id);
+    }
+
+  </script>
   <div class="album py-5 bg-light">
     <div class="container">
-
-
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Kayak en los estuarios de la patagonia.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Alpinismo cordillerano.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">18 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Escalando las montañas de Chile.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">27 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv4.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Canopi en el bosque Valdiviano.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">36 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv5.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Senderismo en la Antártida.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">45 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv6.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Senderismo en Las Torres del Paine.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">59 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        $conn = conectar();
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv7.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Bicicleta por la carretera.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        $query = "SELECT * from imagen";
+
+        $res = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($res) > 0) {
+
+          $index = 0;
+
+          while ($row = mysqli_fetch_assoc($res)) {
+
+            echo '
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="data:image/png;base64,' . base64_encode($row['imagen']) . '" alt="Card image cap" height="300px">
+                <div class="card-body">
+                  <p class="card-text">' . $row['titulo'] . '</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="#editar" class="btn btn-sm btn-outline-secondary" data-toggle="modal" onclick="editarImagen(\'' . $row["titulo"] . '\',' . $row["id"] . ')">Editar</a>
+                      <a href="#editar" class="btn btn-sm btn-outline-danger" data-toggle="modal" onclick="eliminarImagen(' . $row["id"] . ')">Eliminar</a>
+                    </div>
+                    <small class="text-muted">Subida el ' . explode(" ", $row["fecha"])[0] . '</small>
+                  </div>
                 </div>
-                <small class="text-muted">89 mins</small>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv8.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">¡Lo mejor del turismo aventura en Chile!</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+  
+            ';
+          }
+        }
+
+        if(isset($_SESSION["id_rol"])){
+          if($_SESSION["id_rol"] == 3){
+
+            echo '
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+    
+                <a href="#agregar" role="button" data-toggle="modal" class="m-3">
+                  <!-- ICONO SACADO DE BOOTSTRAP ICONS -->
+                  <svg width="5em" height="10em" viewBox="0 0 16 16" class="card-img-top bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                  </svg>
+                </a>
+    
+                <div class="card-body d-flex justify-content-center">
+    
+                  <p class="card-text pb-5">Agregar una nueva imagen</p>
+    
                 </div>
-                <small class="text-muted">99 mins</small>
+    
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="img/adv9.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Surfea las costas de Iquique.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">112 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+            
+            ';
+
+          }
+        }
+
+        ?>
+
       </div>
     </div>
   </div>
