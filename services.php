@@ -224,7 +224,7 @@ require("./resources/conexion.php");
   <br>
  <!-- tabla -->
  <div class="container">
- <table class="table table-striped">
+ <table class="table table-striped table-bordered">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -243,8 +243,6 @@ require("./resources/conexion.php");
         $query = "SELECT servicio.id, servicio.nombre_servicio, servicio.descripcion, region.Nombre, servicio.fecha_creacion, servicio.id_usuario from servicio join region on region.id= servicio.id_region join usuario on servicio.id_usuario= usuario.id ORDER BY servicio.id ASC";
 
         $res = mysqli_query($conn, $query);
-
-
 
         if (mysqli_num_rows($res) > 0) {
 
@@ -276,6 +274,116 @@ require("./resources/conexion.php");
   </div>
   <!--fin tabla -->
 
+  <br><br>
+
+  <?php 
+  
+  if(empty($_SESSION["id_user"])){
+
+    echo "<div class='container'>";
+    echo "<div class='col-sm'>";
+    echo "<div class='card border-default'>";
+    echo "<div class='card-header' style='text-align: center;'>";      
+    echo "Para Comprar o Ingresar servicio, Inicia sesion!";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+
+  }elseif(isset($_SESSION["id_user"])){
+    if($_SESSION["id_rol"] == 1){
+
+      echo "<div class='container'>";
+      echo "<div class='col-sm'>";
+      echo "<div class='card border-default'>";
+      echo "<div class='card-header' style='text-align: center;'>";      
+      echo "Para ingresar un servicio, Upgradea tu cuenta <button type='button' class='btn btn-info' data-toggle='modal' data-target='#myModal2'>-> Aqui <-</button>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "<form action='./resources/upgradeRol.php' method='POST' enctype='multipart/form-data'>";
+      echo "<div id='myModal2' class='modal fade' role='dialog'>";
+      echo "<div class='modal-dialog'>";
+      echo "<div class='modal-content'>";
+      echo "<div class='modal-header'>";
+      echo "<h4 class='modal-title'>Hacer click en Upgrade para comenzar a promocionar tus servicios</h4>";
+      echo "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
+      echo "</div>";
+      echo "<div class='modal-footer justify-content-center'>";
+      echo "<button type='submit' class='btn btn-success data='modal'>Upgrade</button>";
+      echo "<button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "</form>";
+    }
+    if($_SESSION["id_rol"] == 2 or $_SESSION["id_rol"] == 3){
+
+      echo "<div class='container'>";
+      echo "<div class='col-sm'>";
+      echo "<div class='card border-default'>";
+      echo "<div class='card-header' style='text-align: center;'>";
+      echo "Ingresa un nuevo Servicio <button type='button' class='btn btn-info' data-toggle='modal' data-target='#myModal'>-> Aqui <-</button>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "<form action='./resources/ingresoServicio.php' method='POST' enctype='multipart/form-data'>";
+      echo "<div id='myModal' class='modal fade' role='dialog'>";
+      echo "<div class='modal-dialog'>";
+      echo "<div class='modal-content'>";
+      echo "<div class='modal-header'>";
+      echo "<h4 class='modal-title'>Ingresar Nuevo Servicio:</h4>";
+      echo "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
+      echo "</div>";
+      echo "<div class='modal-body'>";
+      echo "<div class='form-group row'>";
+      echo "<label for='usuario' class='col-lg-6 col-form-label'>Nombre del Servicio:</label>";
+      echo "<div class='col-lg-12'>";
+      echo "<input type='text' class='form-control' required='' name='Nombre_Servicio'>";
+      echo "</div>";
+      echo "</div>";
+      echo "<div class='form-group row'>";
+      echo "<label for='usuario' class='col-lg-6 col-form-label'>Descripcion:</label>";
+      echo "<div class='col-lg-12'>";
+      echo "<textarea class='form-control' required='' rows='7' cols='63' style='resize: none;' id='Descripcion' name='Descripcion' placeholder='Descripcion....'></textarea>";
+      echo "</div>";
+      echo "</div>";
+      echo "<div class='form-group row'>";
+      echo "<label for='usuario' class='col-lg-6 col-form-label'>Region:</label>";
+      echo "<div class='col-lg-12'>";
+      echo "<select name='Region'>";
+      echo "<option value='0'>Arica</option>";
+      echo "<option value='1'>Valdivia</option>";
+      echo "<option value='2'>Santiago</option>";
+      echo "</select>";
+      echo "</div>";
+      echo "</div>";
+      echo "<div class='form-group row'>";
+      echo "<label for='usuario' class='col-lg-6 col-form-label'>Imagen del Servicio:</label>";
+      echo "<div class='col-lg-12'>";
+      echo "<input type='file' class='form-control' required='' name='imagen' accept='image/jpeg'>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "<div class='modal-footer'>";
+      echo "<button type='submit' class='btn btn-success data='modal'>Ingresar</button>";
+      echo "<button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+      echo "</form>";
+    }
+  }
+  
+   
+    
+  ?>
+
+<br><br>
   <footer>
     <div class="container">
       <div class="row">
@@ -302,9 +410,12 @@ require("./resources/conexion.php");
         </div>
       </div>
     </div>
-    
+
+  
 
   </footer>
 </body>
+
+
 
 </html>
