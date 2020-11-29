@@ -235,7 +235,7 @@ require("./resources/conexion.php");
 
   <?php
 
-$id = $_POST['botonIr'];
+$id = $_POST['IrServicio'];
 
 $conn = conectar();
 

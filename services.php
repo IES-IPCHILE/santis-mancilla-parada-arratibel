@@ -231,6 +231,7 @@ require("./resources/conexion.php");
     <thead>
       <tr>
         <th scope="col">ID</th>
+        <th scope="col">Nombre Propietario</th>
         <th scope="col">Nombre de servicio</th>
         <th scope="col">Descripción</th>
         <th scope="col">Región</th>
@@ -243,7 +244,7 @@ require("./resources/conexion.php");
       $conn = conectar();
 
       if ($conn) {
-        $query = "SELECT servicio.id, servicio.nombre_servicio, servicio.descripcion, region.Nombre, servicio.fecha_creacion, servicio.id_usuario from servicio join region on region.id= servicio.id_region join usuario on servicio.id_usuario= usuario.id ORDER BY servicio.id ASC";
+        $query = "SELECT servicio.id, usuario.username, servicio.nombre_servicio, servicio.descripcion, region.Nombre, servicio.fecha_creacion, servicio.id_usuario from servicio join region on region.id= servicio.id_region join usuario on servicio.id_usuario= usuario.id ORDER BY servicio.id ASC";
 
         $res = mysqli_query($conn, $query);
 
@@ -253,15 +254,141 @@ require("./resources/conexion.php");
 
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
-            echo "<th scope='row'>" . $row['nombre_servicio'] . "</th>";
+            echo "<td>" . $row['username'] . "</td>";
+            echo "<td>" . $row['nombre_servicio'] . "</td>";
             echo "<td>" . $row['descripcion'] . "</td>";
             echo "<td>" . $row['Nombre'] . "</td>";
             echo "<td>" . $row['fecha_creacion'] . "</td>";
-            echo "<td><form action='servicioDetalle.php' method='POST'><button type='submit' class='btn btn-success' name='botonIr' value='". $row['id'] ."'>IR</button></form></td>";
+            echo "<td><form action='servicioDetalle.php' method='POST'><button type='submit' class='btn btn-success' name='IrServicio' value='". $row['id'] ."'>IR</button></form></td>";
             if (isset($_SESSION["id_user"]) && isset($_SESSION["id_rol"])) {
               if ($_SESSION["id_user"] == $row['id_usuario'] or $_SESSION["id_rol"] == 3) {
-                echo "<td><button type ='button' class='btn btn-secondary'>Editar</button></td>";
-                echo "<td><button type ='button' class='btn btn-secondary'>Eliminar</button></td>";
+                echo "<td><button type ='button' class='btn btn-secondary' data-toggle='modal' data-target='#EditarServicioModal' name='EditarServicioModal' value='". $row['id'] ."'>Editar</button></td>";
+                echo "<td><button type ='button' class='btn btn-secondary' data-toggle='modal' data-target='#EliminarServicioModal' name='EliminarServicioModal' value='". $row['id'] ."'>Eliminar</button></td>";
+                $selectRow = "SELECT nombre_servicio, descripcion, id_region, imagen FROM servicio WHERE id='". EditarServicioModal ."';";
+                $resSelect = mysqli_query($conn, $selectRow);
+                while ($row2 = mysqli_fetch_assoc($resSelect)) {
+                  $nom_serv = $row2['nombre_servicio'];
+
+                  echo "<form action='./resources/QuerysServicio.php' method='POST' enctype='multipart/form-data'>";
+                  echo "<div id='EditarServicioModal' class='modal fade' role='dialog'>";
+                  echo "<div class='modal-dialog'>";
+                  echo "<div class='modal-content'>";
+                  echo "<div class='modal-header'>";
+                  echo "<h4 class='modal-title'>Ingresar Nuevo Servicio:</h4>";
+                  echo "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
+                  echo "</div>";
+                  echo "<div class='modal-body'>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Nombre del Servicio:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<input type='text' class='form-control' required='' name='Nombre_Servicio' value='" . $nom_serv . "'>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Descripcion:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<textarea class='form-control' required='' rows='7' cols='63' style='resize: none;' id='Descripcion' name='Descripcion' placeholder='Descripcion....'></textarea>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Region:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<select name='Region'>";
+                  echo "<option value='0'>Arica</option>";
+                  echo "<option value='1'>Tarapacá</option>";
+                  echo "<option value='2'>Antofagasta</option>";
+                  echo "<option value='3'>Atacama</option>";
+                  echo "<option value='4'>Coquimbo</option>";
+                  echo "<option value='5'>Valparaiso</option>";
+                  echo "<option value='6'>Santiago</option>";
+                  echo "<option value='7'>O'Higgins</option>";
+                  echo "<option value='8'>El Maule</option>";
+                  echo "<option value='9'>Ñuble</option>";
+                  echo "<option value='10'>Biobio</option>";
+                  echo "<option value='11'>La Araucanía</option>";
+                  echo "<option value='12'>Los Ríos</option>";
+                  echo "<option value='13'>Los Lagos</option>";
+                  echo "<option value='14'>Aysen</option>";
+                  echo "<option value='15'>Magallanes</option>";
+                  echo "</select>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Imagen del Servicio:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<input type='file' class='form-control' required='' name='imagen' accept='image/jpeg'>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='modal-footer'>";
+                  echo "<button type='submit' class='btn btn-success data='modal' name='IngresarServicio'>Ingresar</button>";
+                  echo "<button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</form>";
+
+                  echo "<form action='./resources/QuerysServicio.php' method='POST' enctype='multipart/form-data'>";
+                  echo "<div id='EliminarServicioModal' class='modal fade' role='dialog'>";
+                  echo "<div class='modal-dialog'>";
+                  echo "<div class='modal-content'>";
+                  echo "<div class='modal-header'>";
+                  echo "<h4 class='modal-title'>Ingresar Nuevo Servicio:</h4>";
+                  echo "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
+                  echo "</div>";
+                  echo "<div class='modal-body'>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Nombre del Servicio:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<input type='text' class='form-control' required='' name='Nombre_Servicio'>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Descripcion:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<textarea class='form-control' required='' rows='7' cols='63' style='resize: none;' id='Descripcion' name='Descripcion' placeholder='Descripcion....'></textarea>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Region:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<select name='Region'>";
+                  echo "<option value='0'>Arica</option>";
+                  echo "<option value='1'>Tarapacá</option>";
+                  echo "<option value='2'>Antofagasta</option>";
+                  echo "<option value='3'>Atacama</option>";
+                  echo "<option value='4'>Coquimbo</option>";
+                  echo "<option value='5'>Valparaiso</option>";
+                  echo "<option value='6'>Santiago</option>";
+                  echo "<option value='7'>O'Higgins</option>";
+                  echo "<option value='8'>El Maule</option>";
+                  echo "<option value='9'>Ñuble</option>";
+                  echo "<option value='10'>Biobio</option>";
+                  echo "<option value='11'>La Araucanía</option>";
+                  echo "<option value='12'>Los Ríos</option>";
+                  echo "<option value='13'>Los Lagos</option>";
+                  echo "<option value='14'>Aysen</option>";
+                  echo "<option value='15'>Magallanes</option>";
+                  echo "</select>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='form-group row'>";
+                  echo "<label for='usuario' class='col-lg-6 col-form-label'>Imagen del Servicio:</label>";
+                  echo "<div class='col-lg-12'>";
+                  echo "<input type='file' class='form-control' required='' name='imagen' accept='image/jpeg'>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "<div class='modal-footer'>";
+                  echo "<button type='submit' class='btn btn-success data='modal' name='IngresarServicio'>Ingresar</button>";
+                  echo "<button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</form>";
+                }
               }
             }
             echo "<tr>";
@@ -269,6 +396,11 @@ require("./resources/conexion.php");
         } else {
           echo "<h1>NO HAY SERVICIOS EN ESTA REGION</H1>";
         }
+  
+
+  
+
+
       }
 
       ?>
@@ -333,7 +465,7 @@ require("./resources/conexion.php");
       echo "</div>";
       echo "</div>";
       echo "</div>";
-      echo "<form action='./resources/ingresoServicio.php' method='POST' enctype='multipart/form-data'>";
+      echo "<form action='./resources/QuerysServicio.php' method='POST' enctype='multipart/form-data'>";
       echo "<div id='myModal' class='modal fade' role='dialog'>";
       echo "<div class='modal-dialog'>";
       echo "<div class='modal-content'>";
@@ -385,7 +517,7 @@ require("./resources/conexion.php");
       echo "</div>";
       echo "</div>";
       echo "<div class='modal-footer'>";
-      echo "<button type='submit' class='btn btn-success data='modal'>Ingresar</button>";
+      echo "<button type='submit' class='btn btn-success data='modal' name='IngresarServicio'>Ingresar</button>";
       echo "<button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>";
       echo "</div>";
       echo "</div>";
@@ -395,7 +527,7 @@ require("./resources/conexion.php");
     }
   }
   
-   
+  
     
   ?>
 
