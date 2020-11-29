@@ -22,6 +22,9 @@ require("./resources/conexion.php");
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
+          <img src="img/logo.png" alt="Logo" height="50px" width="150px">
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="./index.php">Inicio</a>
         </li>
         <li class="nav-item">

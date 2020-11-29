@@ -21,6 +21,9 @@ require("./resources/conexion.php");
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      	<li class="nav-item">
+      		<img src="img/logo.png" alt="Logo" height="50px" width="150px">
+      	</li>
         <li class="nav-item">
           <a class="nav-link" href="./index.php">Inicio</a>
         </li>
@@ -223,39 +226,53 @@ require("./resources/conexion.php");
   <!-- fin carrusel -->
   <br><br>
 
+   <br>
+
+  <!-- título -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <h1>Bienvenido a TurismoChile.</h1>
+      </div>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>
+  <br>
+
  <!-- primera fila de cartas -->
   <div class="container">
     <div class="row">
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service1.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 1</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Publicita tus servicios.</h5>
+            <p class="card-text">Regístrate y publicita tu servicio.</p>
           </div>
         </div>
       </div>
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service2.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 2</h5>
-            <p class="card-text">Servicio que ofrecemos</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Calidad</h5>
+            <p class="card-text">Todos los servicios que ofrecemos cumplen con los estándares mínimos de calidad.</p>
           </div>
         </div>
       </div>
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service3.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 3</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Disponibilidad</h5>
+            <p class="card-text">Nuestros servicios están disponibles con los cuatro nueves: 99.99% del tiempo.</p>
           </div>
         </div>
       </div>
@@ -270,33 +287,30 @@ require("./resources/conexion.php");
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service4.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 4</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Seguridad</h5>
+            <p class="card-text">Contamos con personal capacitado para mantener nuestro sitio seguro.</p>
           </div>
         </div>
       </div>
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service5.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 5</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Integridad</h5>
+            <p class="card-text">No perdemos ningún dato de los que nos entregues para comunicar a nuestros clientes.</p>
           </div>
         </div>
       </div>
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service6.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 6</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Confidencialidad</h5>
+            <p class="card-text">Las identidades de nuestros prestadores de servicio permanecen en contacto únicamente en relación cliente-vendedor.</p>
           </div>
         </div>
       </div>
@@ -312,33 +326,33 @@ require("./resources/conexion.php");
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service7.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 7</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Turismo Chile</h5>
+            <p class="card-text">Somos un equipo comprometido con nuestros servicios.</p>
+            <a href="aboutus.php" class="btn btn-primary">Quiénes sómos</a>
           </div>
         </div>
       </div>
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service8.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 8</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Servicios Integrales</h5>
+            <p class="card-text">Revisa los servicios que nuestros vendedores tienen para tí.</p>
+            <a href="services.php" class="btn btn-primary">Ver servicios</a>
           </div>
         </div>
       </div>
       <div class="col-sm">
         <!-- carta -->
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/service9.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Servicio 9</h5>
-            <p class="card-text">Servicio que ofrecemos.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Contáctanos</h5>
+            <p class="card-text">Envíanos una sugerencia, un reclamo o una felicitación.</p>
+            <a href="contactus.php" class="btn btn-primary">Contáctanos</a>
           </div>
         </div>
       </div>
