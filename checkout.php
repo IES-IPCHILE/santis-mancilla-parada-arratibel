@@ -21,9 +21,9 @@ require("./resources/conexion.php");
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      	<li class="nav-item">
-      		<img src="img/logo.png" alt="Logo" height="50px" width="150px">
-      	</li>
+        <li class="nav-item">
+          <img src="img/logo.png" alt="Logo" height="50px" width="150px">
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="./index.php">Inicio</a>
         </li>
@@ -196,7 +196,6 @@ require("./resources/conexion.php");
       </div>
 
   </nav>
-  <!-- inicio carrusel -->
   <div id="carouselId" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselId" data-slide-to="0" class="active"></li>
@@ -223,19 +222,67 @@ require("./resources/conexion.php");
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <!-- fin carrusel -->
-  <br><br>
+  <br>
 
-   <br>
-
-  <!-- título -->
+ <!-- Checkout -->
 
   <div class="container">
     <div class="row">
       <div class="col-sm">
+        <h1>A pagar:</h1>
       </div>
       <div class="col-sm">
-        <h1>Bienvenido a TurismoChile.</h1>
+      <div class="card mb-4">
+        <div class="card-body">
+
+          <h5 class="mb-3">El monto total de:</h5>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+              Monto temporal
+              <span>$53.980</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              Monto servicio adicional
+              <span>Gratis</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+              <div>
+                <strong>El monto total de </strong>
+                <strong>
+                  <p class="mb-0">(incluye IVA)</p>
+                </strong>
+              </div>
+              <span><strong>$53.980</strong></span>
+            </li>
+          </ul>
+
+          <button type="button" class="btn btn-primary btn-block waves-effect waves-light">Comprar</button>
+
+        </div>
+      </div>
+      <div class="card mb-4">
+        <div class="card-body">
+
+          <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Añade un código de descuento (opcional)
+            <span><i class="fas fa-chevron-down pt-1"></i></span>
+          </a>
+
+          <div class="collapse" id="collapseExample">
+            <div class="mt-3">
+              <div class="md-form md-outline mb-0">
+                <input type="text" id="discount-code" class="form-control font-weight-light"
+                  placeholder="Ingrese código de descuento">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
       </div>
       <div class="col-sm">
       </div>
@@ -243,125 +290,9 @@ require("./resources/conexion.php");
   </div>
   <br>
 
- <!-- primera fila de cartas -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service1.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Publicita tus servicios.</h5>
-            <p class="card-text">Regístrate y publicita tu servicio.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service2.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Calidad</h5>
-            <p class="card-text">Todos los servicios que ofrecemos cumplen con los estándares mínimos de calidad.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service3.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Disponibilidad</h5>
-            <p class="card-text">Nuestros servicios están disponibles con los cuatro nueves: 99.99% del tiempo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br><br>
-  <!-- fin primera fila de cartas -->
-
-  <!-- segunda fila de cartas -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service4.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Seguridad</h5>
-            <p class="card-text">Contamos con personal capacitado para mantener nuestro sitio seguro.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service5.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Integridad</h5>
-            <p class="card-text">No perdemos ningún dato de los que nos entregues para comunicar a nuestros clientes.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service6.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Confidencialidad</h5>
-            <p class="card-text">Las identidades de nuestros prestadores de servicio permanecen en contacto únicamente en relación cliente-vendedor.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br><br>
-  <!-- fin segunda fila de cartas -->
+ 
 
 
-  <!-- tercer fila de cartas -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service7.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Turismo Chile</h5>
-            <p class="card-text">Somos un equipo comprometido con nuestros servicios.</p>
-            <a href="aboutus.php" class="btn btn-primary">Quiénes sómos</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service8.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Servicios Integrales</h5>
-            <p class="card-text">Revisa los servicios que nuestros vendedores tienen para tí.</p>
-            <a href="services.php" class="btn btn-primary">Ver servicios</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/service9.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Contáctanos</h5>
-            <p class="card-text">Envíanos una sugerencia, un reclamo o una felicitación.</p>
-            <a href="contactus.php" class="btn btn-primary">Contáctanos</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br><br>
-  <!-- fin tercer fila de cartas -->
-
-  <!-- footer -->
   <footer>
     <div class="container">
       <div class="row">
@@ -389,6 +320,10 @@ require("./resources/conexion.php");
       </div>
     </div>
   </footer>
+
+
+
+
 </body>
 
 </html>
