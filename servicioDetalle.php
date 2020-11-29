@@ -297,7 +297,7 @@ if (mysqli_num_rows($res) > 0) {
                     <li class="text-muted"><del>Guía Incluido</del></li>
                     <li class="text-muted"><del>Almuerzo Incluido</del></li>
                 </ul>
-                <button class="container btn btn-primary">Pagar</button>
+                <button type="button" class="container btn btn-primary" data-toggle="modal" data-target="#pago">Pagar</button>
             </div>
         </div>
         </div>
@@ -313,7 +313,7 @@ if (mysqli_num_rows($res) > 0) {
                     <li class="text-muted"><del>Guía Incluido</del></li>
                     <li class="text-muted"><del>Almuerzo Incluido</del></li>
                 </ul>
-                <button class="container btn btn-success">Pagar</button>  
+                <button type="button" class="container btn btn-success" data-toggle="modal" data-target="#pago">Pagar</button>  
                              
             </div>
         </div>
@@ -330,7 +330,7 @@ if (mysqli_num_rows($res) > 0) {
                     <li>Guía Incluido</li>
                     <li class="text-muted"><del>Almuerzo Incluido</del></li>
                 </ul>
-                <button class="container btn btn-warning">Pagar</button>
+                <button type="button" class="container btn btn-warning" data-toggle="modal" data-target="#pago">Pagar</button>
             </div>
         </div>
         </div>        
@@ -346,11 +346,74 @@ if (mysqli_num_rows($res) > 0) {
                     <li>Guía Incluido</li>
                     <li>Almuerzo Incluido</li>
                 </ul>
-                <button class="container btn btn-danger">Pagar</button>
+                <button type="button" class="container btn btn-danger" data-toggle="modal" data-target="#pago">Pagar</button>
             </div>
         </div>
         </div>        
     </div>
+</div>
+<div class="modal fade" id="pago">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ingrese sus Datos</h4>
+        <button type="button" class="close" data-dismiss="modal">X</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="container">
+              <div class="credit-card-div">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="form-group row">
+                      <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Ingresar numero de tarjeta">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font">Mes</span> <input type="text" class="form-control" placeholder="MM">
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font">Año</span> <input type="text" class="form-control" placeholder="YY">
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font">CCV</span> <input type="text" class="form-control" placeholder="CCV">
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3"><img src="img/tarjeta.png" class="img-rounded"></div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-md-12 pad-adjust">
+                        <input type="text" class="form-control" placeholder="Nombre del titular">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-md-12 pad-adjust">
+                        <div class="checkbox">
+                          <label><input type="checkbox" checked="" class="text-muted"> Guardar detalles para pagos rapidos</label>
+                        </div>
+                      </div>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row container">
+          <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+            <input type="button" class="btn btn-danger" value="Cancelar" data-dismiss="modal">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+            <input type="button" class="btn btn-warning btn-block" value="Pagar Ahora" data-dismiss="modal">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
