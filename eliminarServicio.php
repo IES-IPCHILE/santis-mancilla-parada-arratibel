@@ -15,6 +15,8 @@ require("./resources/conexion.php");
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <script src="./js/jquery-3.5.1.slim.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap-social.css">
+  <link rel="stylesheet" href="./css/font-awesome.css">
 </head>
 
 <body>
@@ -286,9 +288,15 @@ if (mysqli_num_rows($res) > 0) {
           <div class="pull-right">
             <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
             <div class="redes-footer">
-              <a href="https://www.facebook.com/"><img src="img/facebook.jpg" width="38"></a>
-              <a href="https://twitter.com/"><img src="img/twitter.jpg" width="50"></a>
-              <a href="https://www.instagram.com/"><img src="img/instagram.jpg" width="50"></a>
+            <a class="btn btn-social-icon btn-twitter" href="https://www.twitter.com">
+                <span class="fa fa-twitter"></span>
+              </a>
+              <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com"> 
+                <span class="fa fa-facebook"></span>
+              </a>
+              <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com">
+                <span class="fa fa-instagram"></span>
+              </a>
             </div>
           </div>
           <div class="row">
