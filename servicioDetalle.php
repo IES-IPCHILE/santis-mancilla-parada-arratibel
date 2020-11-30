@@ -241,7 +241,7 @@ $conn = conectar();
 
 if ($conn) {
   
-$query = "SELECT servicio.imagen, servicio.nombre_servicio, servicio.descripcion from servicio where servicio.id=$id";
+$query = "SELECT servicio.imagen, servicio.nombre_servicio, servicio.descripcion, servicio.id_region, region.Nombre from servicio join region on region.id=servicio.id_region where servicio.id=$id";
 $res = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($res) > 0) {
@@ -263,6 +263,7 @@ if (mysqli_num_rows($res) > 0) {
     echo"<td width='800px' style='vertical-align: top;'><h1>" . $row['nombre_servicio'] . "</h1>";
     echo"<hr>";
     echo"<p>" . $row['descripcion'] . "</p>";
+    echo"<p>Ubicacion: " . $row['Nombre'] . "</p>";
     echo"</td>";
     echo"</tr>";
     echo"</table>";
@@ -270,7 +271,107 @@ if (mysqli_num_rows($res) > 0) {
     echo"</div>";
     echo"</div>";
     echo"</div>";
-    echo"<br>";
+
+    echo "<br><br>";
+
+    if($row['id_region'] == 0 ) {
+    echo '
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d814894.8007391326!2d-70.12362147889034!3d-18.41724589373376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915a7e0ceeac0511%3A0x7e4efeaf6214fd1f!2sArica%20y%20Parinacota%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606699014959!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    ';
+    } elseif ($row['id_region'] == 1 ){
+    echo '
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1916155.6561880526!2d-70.48339503489592!3d-20.279912591815535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915165475beeeb15%3A0x33feb2b2ce6d8fc!2sTarapac%C3%A1%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700254925!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    ';
+    } elseif ($row['id_region'] == 2 ){
+    echo '
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862918.5980348806!2d-70.46987812041435!3d-24.223834082876746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96a58a71486af89d%3A0x6df135c2c263be29!2sAntofagasta%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606699983154!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    ';
+    }elseif ($row['id_region'] == 3 ){
+      echo '
+      <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813509.1499794396!2d-71.05137303891931!3d-27.40661564734916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691379197ae255f%3A0x1e541d1af2f13834!2sAtacama%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700046168!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      ';
+    }elseif ($row['id_region'] == 4 ){
+      echo '
+      <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1757319.4412828898!2d-71.88429836891362!3d-30.65467861206593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96893835f8510297%3A0x85982eeec5cf03a1!2sCoquimbo%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700188669!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      ';
+      }elseif ($row['id_region'] == 5 ){
+        echo '
+        <div class="container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26753.915305608145!2d-71.6285581164112!3d-33.05016325539587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689dde3de20cec7%3A0xeb0a3a8cbfe19b76!2sValpara%C3%ADso%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700561935!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        ';
+        }elseif ($row['id_region'] == 6 ){
+          echo '
+          <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850712.876334352!2d-71.29916623486923!3d-33.60278309583873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96626f6a7df81e51%3A0x60cdc26d444b83da!2sRegi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700705402!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          ';
+          }elseif ($row['id_region'] == 7 ){
+            echo '
+            <div class="container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d842485.3788774585!2d-71.5995847027014!3d-34.42780895858839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663435d63019d29%3A0x17dd0c185ae17ea9!2sO&#39;Higgins%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700767784!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            ';
+            }elseif ($row['id_region'] == 8 ){
+              echo '
+              <div class="container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d830222.137984543!2d-72.1092250352931!3d-35.626365011874604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966454a2af3b12a1%3A0xe46a957801599b80!2sMaule%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700824043!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+              ';
+              }elseif ($row['id_region'] == 9 ){
+                echo '
+                <div class="container">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819982.392100986!2d-72.50720248027682!3d-36.60095501807452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966ed54c02a19871%3A0x71e1852dc0af03ae!2zw5F1YmxlLCBDaGlsZQ!5e0!3m2!1ses-419!2sus!4v1606700867858!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                ';
+                }elseif ($row['id_region'] == 10 ){
+                  echo '
+                  <div class="container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1621525.3173260002!2d-73.59791797680474!3d-37.45973886243256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9668484b3b386227%3A0xc8e553de0ce0c351!2zQsOtbyBCw61vLCBDaGlsZQ!5e0!3m2!1ses-419!2sus!4v1606700922041!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  ';
+                  }elseif ($row['id_region'] == 11 ){
+                    echo '
+                    <div class="container">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1596372.478325348!2d-73.29560040205364!3d-38.60482667524282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614b2c8d0e8c75d%3A0x31dd188520a10606!2sAraucan%C3%ADa%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606700997094!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    ';
+                    }elseif ($row['id_region'] == 12 ){
+                      echo '
+                      <div class="container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d782637.6452116474!2d-73.21455391495134!3d-39.98212058735364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961681c9a5d1bf59%3A0x61b54b8fec2ecc8e!2sLos%20R%C3%ADos%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606701031973!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                      </div>
+                      ';
+                      }elseif ($row['id_region'] == 13 ){
+                        echo '
+                        <div class="container">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030166.66441249!2d-75.45848097223778!3d-42.1257333131215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96183bae0865f2e9%3A0x6f9f31f813b3f88b!2sLos%20Lagos%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606701064704!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        ';
+                        }elseif ($row['id_region'] == 14 ){
+                          echo '
+                          <div class="container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818901.199476557!2d-75.62755134130025!3d-46.37269722850565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbd8aa4fdb9176d11%3A0xcbfcbd94bac1fef3!2zQXlzw6luLCBDaGlsZQ!5e0!3m2!1ses-419!2sus!4v1606701110805!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                          </div>
+                          ';
+                          }elseif ($row['id_region'] == 15 ){
+                            echo '
+                            <div class="container">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1222213.2191527584!2d-72.70137795624412!3d-53.25127713497584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4d54a49b3481e7%3A0x5b953543d8c5c3d1!2sMagallanes%2C%20Magallanes%20y%20la%20Ant%C3%A1rtica%20Chilena%2C%20Chile!5e0!3m2!1ses-419!2sus!4v1606701149768!5m2!1ses-419!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                            ';
+                            }
+
 
 }
 }else{
@@ -278,7 +379,12 @@ if (mysqli_num_rows($res) > 0) {
 }
 }
 
+
+
+
 ?>       
+
+
   
   <div class="container">
     <div>
